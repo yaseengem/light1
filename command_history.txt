@@ -1,6 +1,5 @@
 http://127.0.0.1:5001/functest-f4a98/us-central1/addMessage?text=uppercaseme
-
-
+http://127.0.0.1:5001/functest-f4a98/us-central1/api/
 https://us-central1-functest-f4a98.cloudfunctions.net/addMessage?text=uppercaseme
 
   399  mkdir functest
