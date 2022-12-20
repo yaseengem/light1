@@ -1,0 +1,20 @@
+http://127.0.0.1:5001/functest-f4a98/us-central1/addMessage?text=uppercaseme
+
+
+https://us-central1-functest-f4a98.cloudfunctions.net/addMessage?text=uppercaseme
+
+  399  mkdir functest
+  400  cd functest/
+  401  npm install -g firebase-tools
+  402  sudo npm install -g firebase-tools
+  403  firebase login
+  404  firebase init firestore
+  405  firebase init functions
+  406  code .
+  407  history
+
+396  cd functions/
+  397  npm install --save @google-cloud/vision@2.4.0
+  398  firebase emulators:start
+  399  firebase deploy --only functions
+  400  history
