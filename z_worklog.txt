@@ -1,0 +1,13 @@
+Daily notes:
+
+20 Dec 2022:
+Created two functions in differnt files. 
+Created local env variables, 
+Local  simulation working.
+Deploy to Firebase is working.
+Both local and cloud deployment tested in browser.
+
+
+
+
+
