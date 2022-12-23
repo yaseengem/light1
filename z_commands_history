@@ -1,0 +1,93 @@
+
+  363  git clone https://github.com/flutter/codelabs.git flutter-codelabs
+  364  ls
+  365  cd flutter-codelabs/
+  366  cd firebase-get-to-know-flutter/
+  367  cd step_02
+  368  code .
+  369  cd ..
+  370  cd friendlychat/
+  371  ls
+  372  cd cloud-functions-start/
+  373  firebase --version
+  374  firebase login
+  375  firebase use --add
+  376  firebase deploy --except functions
+  377  ls
+  378  code .
+  379  ls
+  380  firebase deploy --only functions
+  381  cd functions/
+  382  npm install --save firebase-functions@latest
+  383  cd ..
+  384  firebase deploy --only functions
+  385  cd functions/
+  386  firebase deploy --only functions
+  387  cd ..
+  388  cd functions/
+  389  npm install --save firebase-functions@latest
+  390  cd ..
+  391  firebase deploy --only functions
+  392  npm install --save-exact firebase-functions@0.7.0 
+  393  npm install --save-exact firebase-admin@5.4.0
+  394  firebase deploy --only functions
+  395  npm install --save @google-cloud/vision@2.4.0
+  396  cd functions/
+  397  npm install --save @google-cloud/vision@2.4.0
+  398  firebase emulators:start
+  399  firebase deploy --only functions
+  400  history
+  401  cd functions/
+  402  npm install --save firebase-functions@latest
+  403  cd ..
+  404  firebase deploy --only functions
+  405  firebase emulators:start
+  406  npm install dotenv
+  407  cd functions/
+  408  npm install dotenv
+  409  npm install dotenv --save
+  410  cd ..
+  411  firebase emulators:start
+  412  cd ..
+  413  cd functest/
+  414  firebase emulators:start
+  415  firebase deploy --only functions
+  416  firebase emulators:start
+  417  firebase deploy --only functions
+  418  firebase emulators:start
+  419  firebase functions:config:get > ~/Downloads/functest_env.json
+  420  firebase emulators:start
+  421  firebase deploy --only functions
+  422  firebase emulators:start
+  423  firebase deploy --only functions
+  424  firebase use dev
+  425  firebase emulators:start
+  426  firebase deploy --only functions
+  427  git init
+  428  git commit -m "first commit"
+  429  git add .
+  430  git commit -m "first commit"
+  431  git branch -M main
+  432  git remote add origin https://github.com/yaseengem/light1.git
+  433  git push -u origin main
+  434  clear
+  435  firebase emulators:start
+  436  npm install "@google-cloud/language":"^3.8.0" --save
+  437  cd functions/
+  438  npm install "@google-cloud/language":"^3.8.0" --save
+  439  npm install google-cloud/language --save
+  440  npm install @google-cloud/language --save
+  441  cd..
+  442  cd ..
+  443  firebase emulators:start
+  444  cd pro
+  445  mkdir functest
+  446  cd functest/
+  447  npm install -g firebase-tools
+  448  sudo npm install -g firebase-tools
+  449  firebase login
+  450  firebase init firestore
+  451  firebase init functions
+  452  code .
+  453  history
+  
