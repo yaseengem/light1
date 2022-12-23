@@ -5,12 +5,10 @@ Next items:
 
 
 Backlog:
-
+Add a new func
 
 
 
 Completed:
-
-
 
 Build two fnctions in separate files.
