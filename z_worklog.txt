@@ -1,6 +1,21 @@
 Daily notes:
 
 
+24 Dec 2022
+Fire store seems tooo comlicated to searching text.. It cannot even search the sb string.. WHich will be very imporntant.. So I may have to look for an alternate solition.. Say like mySQL.
+But then the question comes.. If the cloud fucntion is also even wroth.. it is also supposed to use node and express.. I can use a Vm today and do the development in a much simpler way. May be thats where, talib headed.. 
+So it would be like Python backend. Flutter fron end. 
+Firebasee authentication.. I wnted to check ifthere is an alternateive to firebase auth also.. But then it will be too far like Passport.js or authlib, etc.. It may be too risky for authentication like critical service.. So let me stick iwth firebase for now for auth. It will hellp withflutter being front end also. it can integrate well with firebase.
+Next step: look for DB alnternative.. firebase is nnot useful.
+
+
+
+
+
+
+
+
+
 20 Dec 2022:
 Created two functions in differnt files. 
 Created local env variables, 
