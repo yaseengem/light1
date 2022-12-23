@@ -1,15 +1,19 @@
-// const dotenv1 = require('dotenv').config({path: './.env.local'});
 // const makeUppercase = require('./makeUppercase');
 // const addMessage = require('./addMessage');
 
 // exports.makeUppercase = makeUppercase.makeUppercase;
 // exports.addMessage = addMessage.addMessage;
+const dotenv1 = require('dotenv').config({ path: './.env.local' });
+
 const functions = require("firebase-functions");
+
+const ini = require("./initApp");
+ini.initApp();
 
 const express = require('express');
 const cors = require('cors');
-
 const app = express();
+
 
 // Automatically allow cross-origin requests
 app.use(cors({ origin: true }));
@@ -25,7 +29,7 @@ const authenticate = async (req, res, next) => {
     }
     const idToken = req.headers.authorization.split('Bearer ')[1];
     try {
-        const decodedIdToken = await admin.auth().verifyIdToken(idToken);
+        const decodedIdToken = await global.fadmin.auth().verifyIdToken(idToken);
         req.user = decodedIdToken;
         next();
         return;
@@ -40,8 +44,10 @@ const authenticate = async (req, res, next) => {
 
 // build multiple CRUD interfaces:
 app.get('/', (req, res) => {
+    const clist = require("./course_list");
+    clist.getCourse();
     res.status(200).json({ 'Good message': 'just get' });
-}); 
+});
 app.get('/:id', (req, res) => {
     res.status(200).json({ 'Good message': 'get for id' });
 });
