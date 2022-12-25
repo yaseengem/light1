@@ -9,6 +9,7 @@ const functions = require("firebase-functions");
 
 const ini = require("./initApp");
 ini.initApp();
+ini.connectSQL();
 
 const express = require('express');
 const cors = require('cors');
