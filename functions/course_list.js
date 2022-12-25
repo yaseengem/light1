@@ -22,6 +22,22 @@ exports.addCourse = function () {
     var courses = global.pathdb.getCollection('courses');
     // courses.add({ name: 'Laurie', age: 19 }).execute();
     courses.add({ name: course_name, desc: course_desc, duration: course_desc, author: course_author }).execute();
+
+  }
+  catch (err) {
+    console.log('Error creating the collection. Ignore if this is first initiailisation of the function : ' + err.message);
+  }
+
+  try {
+    // courses.add({ name: 'Laurie', age: 19 }).execute();
+    courses.add({ name: course_name, desc: course_desc, duration: course_desc, author: course_author }).execute();
+
+  }
+  catch (err) {
+    console.log('Error creating the item in courses collection. Ignore if this is first initiailisation of the function : ' + err.message);
+  }
+
+  try {
     courses.find().execute().then(course_sublist => {
       while (acourse = course_sublist.fetchOne()) {
         console.log(JSON.stringify(acourse));
@@ -29,7 +45,7 @@ exports.addCourse = function () {
     });
   }
   catch (err) {
-    console.log('Error. Ignore if this is first initiailisation of the function : ' + err.message);
+    console.log('Error reading from courses collection. Ignore if this is first initiailisation of the function : ' + err.message);
   }
 
 
