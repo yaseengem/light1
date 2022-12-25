@@ -16,8 +16,22 @@ exports.addCourse = function () {
   //     } else console.log("pathdb do not exists");
   //   });
 
-  var coll_promise = global.pathdb.createCollection('courses', { reuseExisting: true });
-  var courses = global.pathdb.getCollection('courses');
+
+  try {
+    var coll_promise = global.pathdb.createCollection('courses', { reuseExisting: true });
+    var courses = global.pathdb.getCollection('courses');
+    // courses.add({ name: 'Laurie', age: 19 }).execute();
+    courses.add({ name: course_name, desc: course_desc, duration: course_desc, author: course_author }).execute();
+    courses.find().execute().then(course_sublist => {
+      while (acourse = course_sublist.fetchOne()) {
+        console.log(JSON.stringify(acourse));
+      }
+    });
+  }
+  catch (err) {
+    console.log('Error. Ignore if this is first initiailisation of the function : ' + err.message);
+  }
+
 
   // try {
 
@@ -28,12 +42,6 @@ exports.addCourse = function () {
   //   console.log('Error during adding object to courses collection. Error message was : ' + err.message);
   // }
 
-
-  courses.find().execute().then(course_sublist => {
-        while (acourse = course_sublist.fetchOne()) {
-          console.log(JSON.stringify(acourse));
-        }
-  });
 
   //Reading form here
   // try {
