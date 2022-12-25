@@ -19,57 +19,42 @@ exports.addCourse = function () {
   var coll_promise = global.pathdb.createCollection('courses', { reuseExisting: true });
   var courses = global.pathdb.getCollection('courses');
 
-  try {
+  // try {
 
-    courses.add({ name: 'Laurie', age: 19 }).execute();
-    // courses.add({ name: course_name, desc: course_desc, duration: course_desc, author: course_author }).execute();
-  }
-  catch (err) {
-    console.log('Error during adding object to courses collection. Error message was : ' + err.message);
-  }
+  //   courses.add({ name: 'Laurie', age: 19 }).execute();
+  //   // courses.add({ name: course_name, desc: course_desc, duration: course_desc, author: course_author }).execute();
+  // }
+  // catch (err) {
+  //   console.log('Error during adding object to courses collection. Error message was : ' + err.message);
+  // }
 
+
+  courses.find().execute().then(result => {
+    console.log(result.fetchOne()); // { _id: 1, name: 'qux', meta: { other: 'quux' } }
+    console.log(result.fetchOne()); // { _id: 2, name: 'bar', meta: { nested: 'baz' } }
+  });
 
   //Reading form here
-  try {
-
-    // var courses = global.pathdb.getCollection('courses');
-    // course_sublist = courses.find().execute();
-    // var acourse;
-    // while (acourse = course_sublist.fetchOne()) {
-    //   console.log(acourse);
-    // }
-    courses
-      .find('')
-      .bind('name', 'L%')
-      .execute(function (course_sublist) {
-        console.log("exec block: " + course_sublist);
-        while (acourse = course_sublist.fetchOne()) {
-          console.log(JSON.stringify(acourse));
-        }
-
-
-
-      })
-      .then(function () {
-        console.log("then block: " + course_sublist);
-        while (acourse = course_sublist.fetchOne()) {
-          console.log(JSON.stringify(acourse));
-        }
-      });
-  }
-  catch (err) {
-    console.log('Error during getting object from courses collection. Error message was : ' + err.message);
-  }
-
-
-
-
-
-
-
-
-
-
+  // try {
+  //   courses
+  //     .find('')
+  //     .bind('name', 'L%')
+  //     .execute(function (course_sublist) {
+  //       console.log("exec block: " + course_sublist);
+  //       while (acourse = course_sublist.fetchOne()) {
+  //         console.log(JSON.stringify(acourse));
+  //       }
+  //     })
+  //     .then(function () {
+  //       console.log("then block: " + course_sublist);
+  //       while (acourse = course_sublist.fetchOne()) {
+  //         console.log(JSON.stringify(acourse));
+  //       }
+  //     });
+  // }
+  // catch (err) {
+  //   console.log('Error during getting object from courses collection. Error message was : ' + err.message);
+  // }
 };
 
 

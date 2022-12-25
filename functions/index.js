@@ -47,7 +47,7 @@ const authenticate = async (req, res, next) => {
 app.get('/', (req, res) => {
     const clist = require("./course_list");
     clist.addCourse();
-    clist.getCourse();
+    // clist.getCourse();
     
     res.status(200).json({ 'Good message': 'just get' });
 });

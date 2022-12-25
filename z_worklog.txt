@@ -6,7 +6,7 @@ Switched to mysql document db.. Working witb collections etc.. Seeing how to sav
 Need t o solve it.
 Catchng back.. I mvoed away from Firestore to mysql. Rest firebase auth, firebase clod function remains same. Not using the GCP clod function.
 
-
+tats it
 
 
 24 Dec 2022
