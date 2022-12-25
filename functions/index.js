@@ -45,7 +45,7 @@ const authenticate = async (req, res, next) => {
 // build multiple CRUD interfaces:
 app.get('/', (req, res) => {
     const clist = require("./course_list");
-    clist.getCourse();
+    clist.addCourse();
     res.status(200).json({ 'Good message': 'just get' });
 });
 app.get('/:id', (req, res) => {

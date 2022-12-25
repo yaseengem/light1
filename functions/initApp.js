@@ -1,7 +1,8 @@
 const functions = require("firebase-functions");
 
 const fadmin = global.fadmin ?? require('firebase-admin');
-global.fadmin= fadmin;
+global.fadmin = fadmin;
+
 
 
 exports.initApp = function () {
@@ -22,3 +23,30 @@ exports.initApp = function () {
   global.firebaseApp = firebaseApp
 
 }
+
+
+
+exports.connectSQL = function () {
+  const mysql = require('mysql');
+  const connection = global.connection ?? mysql.createConnection({
+    host: '34.148.109.43',
+    user: 'yaseen',
+    password: 'Inno12!@',
+    database: 'pathdb'
+  });
+  global.connection = connection;
+
+  connection.connect((err) => {
+    if (err) {
+      console.log("Not connected");
+      global.sqlconnected = false;
+    }
+    else {
+
+    console.log('Connected!');
+    global.sqlconnected = true;
+    }
+  });
+
+}
+

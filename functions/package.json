@@ -13,11 +13,12 @@
   },
   "main": "index.js",
   "dependencies": {
-    "@google-cloud/language": "^5.1.2",
     "@firebase/firestore": "^3.8.0",
+    "@google-cloud/language": "^5.1.2",
     "dotenv": "^16.0.3",
     "firebase-admin": "^10.0.2",
-    "firebase-functions": "^4.1.1"
+    "firebase-functions": "^4.1.1",
+    "mysql": "^2.18.1"
   },
   "devDependencies": {
     "firebase-functions-test": "^0.2.0"
