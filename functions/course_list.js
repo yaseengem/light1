@@ -1,63 +1,65 @@
 
 
 
-exports.addCourse = async function () {
+exports.addCourse = function () {
   // Grab the text parameter.
-  const course_list = global.fadmin.firestore().collection('course_list');
+  // const course_list = global.fadmin.firestore().collection('course_list');
   course_name = "Course Manners" + Math.random();
   course_author = "Donny";
   course_desc = "This course  is for teaching manners";
   course_duration = 240;
-  // var sql = "INSERT INTO pathdb.courses( name, desc, author, duration ) " +
-  //   " VALUES (' " + employeeName +
-  //   " ', " + employeeSalary +
-  //   ", " + employeeAge
-  //   + " );";
 
-  var squel = require("squel");
-  var sqlcommand = squel.insert()
-    .into("courses")
-    .set("name", course_name)
-    .set("duration", course_duration)
-    .set("author", course_author)
-    .set("desc", course_desc)
-    .toString();
-
-  console.log(sqlcommand);
-  global.connection.query(sqlcommand, (err, result) => {
-    if (err) {
-      console.log("Error inserting into SQL. Error message  is " + err);
-    }
-    else {
-      console.log("Record inserted " + sqlcommand);
-    }
-  });
+  // global.pathdb.existsInDatabase()
+  //   .then(exists => {
+  //     if (exists) {
+  //       console.log("pathdb exists from api call");
+  //     } else console.log("pathdb do not exists");
+  //   });
 
 
+  try {
+    var coll_promise = global.pathdb.createCollection('courses', { reuseExisting: true });
+    var courses = global.pathdb.getCollection('courses');
 
-  // const course_ref = await course_list.add({ course: course_name });
-  // const res = await course_ref.set({ name: course_name, desc: course_desc, duration: course_duration }, { merge: true });
+    courses.add({ name: course_name, desc: course_desc, duration: course_desc, author: course_author }).execute();
+  }
+  catch (err) {
+    console.log('Error during adding object to courses collection. Error message was : ' + err.message);
+  }
+
 };
 
 
 exports.getCourse = async function () {
-  // Grab the text parameter.
-  const course_list = global.fadmin.firestore().collection('course_list');
+  try {
+    var courses = global.pathdb.getCollection('courses');
+    // course_sublist = courses.find().execute();
+    // var acourse;
+    // while (acourse = course_sublist.fetchOne()) {
+    //   console.log(acourse);
+    // }
+    courses
+      .find('')
+      // .bind('name', 'L%')
+      .execute(function (course_sublist) {
+        console.log("exec block: " + course_sublist);
+        while (acourse = course_sublist.fetchOne()) {
+          console.log(JSON.stringify(acourse));
+        }
 
 
-  // const course1 = await course_list.
-  const course = await course_list.where('desc', '>=', 'teaching').where("desc", "<=", "~").get();
-  if (course.empty) {
-    console.log('No matching documents.');
-    return;
+
+      })
+      .then(function () {
+        console.log("then block: " + course_sublist);
+        while (acourse = course_sublist.fetchOne()) {
+          console.log(JSON.stringify(acourse));
+        }
+      });
   }
-
-  course.forEach(doc => {
-    console.log(doc.id, '=>', doc.data());
-  });
-
-
-
+  catch (err) {
+    console.log('Error during getting object from courses collection. Error message was : ' + err.message);
+  }
 
 };
 

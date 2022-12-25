@@ -27,26 +27,37 @@ exports.initApp = function () {
 
 
 exports.connectSQL = function () {
-  const mysql = require('mysql');
-  const connection = global.connection ?? mysql.createConnection({
-    host: '34.148.109.43',
-    user: 'yaseen',
-    password: 'Inno12!@',
-    database: 'pathdb'
-  });
-  global.connection = connection;
+  try {
+    const mysqlx = require('@mysql/xdevapi');
+    var mySession;
+    mysqlx.getSession({
+      host: '34.148.109.43', 'port': 33060,
+      user: 'yaseen', password: 'Inno12!@'
+    }).then(function (mySession) {
+      var pathdb = mySession.getSchema('pathdb');
+      pathdb.existsInDatabase()
+        .then(exists => {
+          if (exists) {
+            console.log ("pathdb exists");
+          } else console.log ("pathdb do not exists");
+        });
+      global.pathdb = pathdb;
 
-  connection.connect((err) => {
-    if (err) {
-      console.log("Not connected");
-      global.sqlconnected = false;
-    }
-    else {
+      var coll_promise = pathdb.createCollection('courses', { reuseExisting: true });
+      var courses = pathdb.getCollection('courses');
 
-    console.log('Connected!');
-    global.sqlconnected = true;
-    }
-  });
+      var questions = pathdb.getCollection('questions');
+      global.questions - questions;
+
+      // var myColl = pathdb.createCollection('my_collection');
+    });
+    // pathdb = mySession.getSchema('pathdb');
+
+
+  }
+  catch (err) {
+    console.log('The following error occurred: ' + err.message);
+  }
 
 }
 
