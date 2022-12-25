@@ -29,9 +29,10 @@ exports.addCourse = function () {
   // }
 
 
-  courses.find().execute().then(result => {
-    console.log(result.fetchOne()); // { _id: 1, name: 'qux', meta: { other: 'quux' } }
-    console.log(result.fetchOne()); // { _id: 2, name: 'bar', meta: { nested: 'baz' } }
+  courses.find().execute().then(course_sublist => {
+        while (acourse = course_sublist.fetchOne()) {
+          console.log(JSON.stringify(acourse));
+        }
   });
 
   //Reading form here
