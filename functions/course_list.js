@@ -1,3 +1,4 @@
+// API for courses.
 
 exports.addCourse = function () {
   // Grab the text parameter.
@@ -49,6 +50,7 @@ exports.getAllCourses = async function () {
 
   try {
     courses.find().execute().then(course_sublist => {
+      
       while (acourse = course_sublist.fetchOne()) {
         console.log(JSON.stringify(acourse));
       }
