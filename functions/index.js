@@ -47,18 +47,28 @@ const authenticate = async (req, res, next) => {
 // build multiple CRUD interfaces:
 app.get('/', (req, res) => {
     const clist = require("./course_list");
-    clist.addCourse();
-    clist.getAllCourses();
-    
-    res.status(200).json({ 'Good message': 'just get' });
+    console.log ("Before caalling get func");
+    var courses_list_string1 = clist.getAllCourses();
+
+    console.log ("After caalling get func");
+    console.log ("In index.js" + courses_list_string1);
+
+    console.log ("After logging string 1");
+    res.status(200).json(courses_list_string1);
 });
 app.get('/:id', (req, res) => {
+
+    clist.getAllCourses();
     res.status(200).json({ 'Good message': 'get for id' });
 });
 app.post('/', (req, res) => {
-    res.status(200).json({ 'Good message': 'post' });
+
+    clist.addCourse();
+    res.json({ 'Good message': 'post' });
 });
 app.put('/:id', (req, res) => {
+
+    clist.addCourse();
 
 });
 app.delete('/:id', (req, res) => {
