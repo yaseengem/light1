@@ -24,22 +24,52 @@ exports.initApp = function () {
 
 }
 
+// Setting environment variables and  putting it to global.
+var host;
+var port;
+var username;
+var passw;
+exports.setEnv = function () {
+  if (process.env.FUNCTIONS_EMULATOR == false) {
+    //DO STUFF SPECIFIC TO EMULATOR ENVIRONMENT
+    host = '34.148.109.43';
+    port = 33060;
+    username = 'yaseen';
+    passw = 'Inno12!@'; 
+    console.log("cloud instance used.")   
 
+  }
+  else {
+
+    host = 'localhost';
+    port = 33060;
+    username = 'yaseen';
+    passw = 'Inno12!@';   
+    console.log("local emulator used.")  
+  }
+  global.host = host;
+  global.port = port;
+  global.username = username;
+  global.passw = passw;
+
+
+
+}
 
 exports.connectSQL = function () {
   try {
     const mysqlx = require('@mysql/xdevapi');
     var mySession;
     mysqlx.getSession({
-      host: '34.148.109.43', 'port': 33060,
-      user: 'yaseen', password: 'Inno12!@'
+      host: host, port: port,
+      user: username, password: passw
     }).then(function (mySession) {
       var pathdb = mySession.getSchema('pathdb');
       pathdb.existsInDatabase()
         .then(exists => {
           if (exists) {
-            console.log ("pathdb exists");
-          } else console.log ("pathdb do not exists");
+            console.log("pathdb exists");
+          } else console.log("pathdb do not exists");
         });
       global.pathdb = pathdb;
 

@@ -8,6 +8,7 @@ const dotenv1 = require('dotenv').config({ path: './.env.local' });
 const functions = require("firebase-functions");
 
 const ini = require("./initApp");
+ini.setEnv();
 ini.initApp();
 ini.connectSQL();
 
@@ -47,7 +48,7 @@ const authenticate = async (req, res, next) => {
 app.get('/', (req, res) => {
     const clist = require("./course_list");
     clist.addCourse();
-    // clist.getCourse();
+    clist.getAllCourses();
     
     res.status(200).json({ 'Good message': 'just get' });
 });
