@@ -1,10 +1,14 @@
 Daily notes:
 
 26 Dec 2022
-Good article to work with collections in mysql
+Good article to work with collections in mysql.
+https://dev.mysql.com/doc/dev/connector-nodejs/8.0/tutorial-Working_with_Collections.html
 Moved to mysql local instance.. And then used  env variable for setting the ip address. And it is working.
 12:57: Desgning the db scehma now so that i can plan the apis after that. Let medesign the APIs andthen DB.
 Server side DBSchema is first cut done. I will wrk on the user side schema later.
+Tried to use objects to store value and then json strinigy.. But it is not working.. Seems that is not a widely used way.
+
+
 
 
 
