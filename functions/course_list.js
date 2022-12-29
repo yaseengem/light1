@@ -7,7 +7,6 @@ exports.addCourse = function () {
   course_authors = "Donny";
   course_desc = "This course is for teaching manners";
   course_duration = 240;
-
   try {
     var coll_promise = global.pathdb.createCollection('courses', { reuseExisting: true });
     var courses = global.pathdb.getCollection('courses');
@@ -26,7 +25,13 @@ exports.addCourse = function () {
 };
 exports.getAllCourses = async function () {
   try {
-
+    var course_sublist_string;
+    var courses = global.pathdb.getCollection('courses');
+    await courses.find().execute().then(course_sublist => {
+        course_sublist_string = course_sublist.fetchAll();
+        console.log("In course_list.js : " + JSON.stringify(course_sublist_string));
+    });
+    return course_sublist_string;
 
 
   }

@@ -46,12 +46,8 @@ const authenticate = async (req, res, next) => {
 
 // build multiple CRUD interfaces:
 app.get('/', async (req, res) => {
-    var course_sublist_string;
-    var courses = global.pathdb.getCollection('courses');
-    await courses.find().execute().then(course_sublist => {
-        course_sublist_string = course_sublist.fetchAll();
-        console.log("In course_list.js : " + JSON.stringify(course_sublist_string));
-    });
+    const course_list = require ('./course_list');
+    const course_sublist_string = await course_list.getAllCourses();
     console.log("In index.js: " + JSON.stringify(course_sublist_string));
     res.status(200).json(course_sublist_string);
 });
