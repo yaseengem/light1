@@ -32,16 +32,10 @@ exports.getAllCourses = async function () {
         console.log("In course_list.js : " + JSON.stringify(course_sublist_string));
     });
     return course_sublist_string;
-
-
   }
   catch (err) {
     console.log('Error reading from courses collection. Ignore if this is first initiailisation of the function : ' + err.message);
   }
-
-
-
-
 };
 
-
+//Test
