@@ -45,38 +45,49 @@ const authenticate = async (req, res, next) => {
 
 
 // build multiple CRUD interfaces:
-app.get('/', (req, res) => {
-    const clist = require("./course_list");
-    console.log ("Before caalling get func");
-    var courses_list_string1 = clist.getAllCourses();
+app.get('/', async (req, res) => {
+    // const clist = require("./course_list");
+    // console.log("Before calling get func");
+    // var courses_list_string1;
+    // whateverImDoing = async () => {
+    //     // const result = await query("SELECT * FROM blablabla");
+    //      courses_list_string1 = await clist.getAllCourses();
+    //     // Do your thing with the result
+    // }
+    // courses_list_string1 = clist.getAllCourses();
 
-    console.log ("After caalling get func");
-    console.log ("In index.js" + courses_list_string1);
+    var course_sublist_string;
+    var courses = global.pathdb.getCollection('courses');
+    console.log("Course list. Checkpoint 1 ");
+    await courses.find().execute().then(course_sublist => {
+        console.log("Course list. Checkpoint 2 ");
 
-    console.log ("After logging string 1");
-    res.status(200).json(courses_list_string1);
+        course_sublist_string = course_sublist.fetchAll();
+        console.log("Course list. Checkpoint 3 ");
+
+        console.log("In course_list.js : " + JSON.stringify(course_sublist_string));
+
+    });
+
+    console.log("After calling get func");
+    console.log("In index.js: " + JSON.stringify(course_sublist_string));
+    console.log("After logging string 1");
+    res.status(200).json(course_sublist_string);
 });
 app.get('/:id', (req, res) => {
-
     clist.getAllCourses();
     res.status(200).json({ 'Good message': 'get for id' });
 });
 app.post('/', (req, res) => {
-
     clist.addCourse();
     res.json({ 'Good message': 'post' });
 });
 app.put('/:id', (req, res) => {
-
     clist.addCourse();
-
 });
 app.delete('/:id', (req, res) => {
-
 });
-app.get('/', (req, res) => {
 
-});
 
 // Expose Express API as a single Cloud Function:
 exports.api = functions.https.onRequest(app);

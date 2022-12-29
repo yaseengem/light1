@@ -24,24 +24,10 @@ exports.addCourse = function () {
   }
 
 };
-exports.getAllCourses = function () {
-
-
+exports.getAllCourses = async function () {
   try {
-    var courses = global.pathdb.getCollection('courses');
-    courses.find().execute().then(course_sublist => {
-      var course_sublist_string = "{  [ ";
 
 
-      while (acourse = course_sublist.fetchOne()) {
-        // console.log(JSON.stringify(acourse));
-        course_sublist_string += JSON.stringify(acourse) + ',';
-      }
-      course_sublist_string = course_sublist_string.slice(0, -2) + ']  }';
-
-      console.log("In course_list.js" + course_sublist_string);
-      return course_sublist_string;
-    });
 
   }
   catch (err) {
