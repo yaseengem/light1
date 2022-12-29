@@ -1,5 +1,15 @@
 Daily notes:
 
+
+
+
+29 Dec 2022:
+
+Solved the mysql query problem from a spearte file. It is working now.. Just add await and async in source index and desntation fnction.
+Next I need to build the API for post,  get with id, and delete course.
+Next it will be for all the apis.
+
+
 26 Dec 2022
 Good article to work with collections in mysql.
 https://dev.mysql.com/doc/dev/connector-nodejs/8.0/tutorial-Working_with_Collections.html
