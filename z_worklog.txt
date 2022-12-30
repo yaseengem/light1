@@ -1,5 +1,8 @@
 Daily notes:
 
+30 Dec 2022:
+Error while storing data from params.. Trying to solve.
+Later may be make a CRUD tetmplate
 
 
 
