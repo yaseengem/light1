@@ -51,20 +51,16 @@ app.use(express.urlencoded({
 app.use(express.json());
 
 // build multiple CRUD interfaces:
-app.get('/', async (req, res) => {
-    const course_list = require('./course_list');
+app.get('/courses/', async (req, res) => {
+    const course_list = require('./courses');
     const course_sublist_string = await course_list.getAllCourses();
     // console.log("In index.js: " + JSON.stringify(course_sublist_string));
     res.status(200).json(course_sublist_string);
 });
 
-app.get('/:id', (req, res) => {
-    clist.getAllCourses();
-    res.status(200).json({ 'Good message': 'get for id' });
-});
 
-app.post('/', async (req, res) => {
-    const course_list = require('./course_list');
+app.post('/courses/', async (req, res) => {
+    const course_list = require('./courses');
     // console.log("body. name in Index: " + req.body.name);
     var new_course = { name: req.body.name, desc: req.body.desc, authors: req.body.authors, duration: req.body.duration };
     // console.log ("New Course name is : " + JSON.stringify(new_course));
@@ -81,8 +77,16 @@ app.post('/', async (req, res) => {
 //     clist.addCourse();
 //     res.json({ 'Good message': 'post' });
 // });
+
+app.get('/:id', (req, res) => {
+    
+
+
+    
+});
+
 app.put('/:id', (req, res) => {
-    clist.addCourse();
+    // clist.addCourse();
 });
 app.delete('/:id', (req, res) => {
 });
