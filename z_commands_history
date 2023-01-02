@@ -102,3 +102,30 @@
 
   453  history
   
+
+
+
+
+107  ps -ef | grep java
+  108  ps -ef | more
+  109  sudo kill 4260
+  110  sudo kill 3091
+  111  history
+
+
+
+
+  112  mysql
+  113  sudo  apt update
+  114  sudo apt install mysql-server
+  115  sudo systemctl start mysql.service
+  116  sudo mysql
+  117  systemctl status mysql.service
+  118  mysql -u yaseen -p
+  119  sudo  apt update
+  120  sudo apt install mysql-workbench-community
+  121  sudo  snap install mysql-workbench-community
+  122  history
+
+
+
