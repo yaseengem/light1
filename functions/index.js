@@ -54,10 +54,9 @@ app.use(express.json());
 app.get('/', async (req, res) => {
     const course_list = require('./course_list');
     const course_sublist_string = await course_list.getAllCourses();
-    console.log("In index.js: " + JSON.stringify(course_sublist_string));
+    // console.log("In index.js: " + JSON.stringify(course_sublist_string));
     res.status(200).json(course_sublist_string);
 });
-
 
 app.get('/:id', (req, res) => {
     clist.getAllCourses();
@@ -66,20 +65,16 @@ app.get('/:id', (req, res) => {
 
 app.post('/', async (req, res) => {
     const course_list = require('./course_list');
-
-    console.log("body. name in Index: " + req.body.name);
-
-
+    // console.log("body. name in Index: " + req.body.name);
     var new_course = { name: req.body.name, desc: req.body.desc, authors: req.body.authors, duration: req.body.duration };
-    console.log ("New Course name is : " + JSON.stringify(new_course));
+    // console.log ("New Course name is : " + JSON.stringify(new_course));
     const added_count = await course_list.addCourse(JSON.stringify(new_course));
-    console.log("Completed In index.js: " + added_count);
+    // console.log("Completed In index.js: " + added_count);
     if (added_count > 0) {
         res.status(200).json(added_count);
     } else{
         res.status(501).json("Error");
     }
-
 });
 
 // app.post('/', (req, res) => {

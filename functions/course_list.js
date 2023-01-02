@@ -17,8 +17,6 @@ exports.addCourse = async function (new_item) {
   try {
     console.log("Doc in Func : " + new_item)
     // var added = await courses.add({ name: 'Laurie', age: 19 }).execute();
-
-
     // var newDoc = { name: namee, description: 'Test Description' };
     var added = await courses.add(new_item).execute();
     console.log("Items count in Func : " + added.getAffectedItemsCount());
@@ -27,14 +25,13 @@ exports.addCourse = async function (new_item) {
     } else {
       return 0;;
     }
-
     // return added.getAffectedItemsCount();
   }
   catch (err) {
     console.log('Error creating the item in courses collection. Ignore if this is first initiailisation of the function : ' + err.message);
   }
-
 };
+
 exports.getAllCourses = async function () {
   try {
     var course_sublist_string;
@@ -49,5 +46,3 @@ exports.getAllCourses = async function () {
     console.log('Error reading from courses collection. Ignore if this is first initiailisation of the function : ' + err.message);
   }
 };
-
-//Test
