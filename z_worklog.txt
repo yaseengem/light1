@@ -1,5 +1,11 @@
 Daily notes:
 
+2 jan 2023:
+I have now solved the problems with the VM. Both the get and put works.. But a big task ahead is to be srcutre the folder. Which will probably make my ealrier code useless as there is a lto of code that may go in it from the best practice code.
+Index is presently borken from the api, starting copling index to the best practice code. I will put my API code in the best practice code.
+
+
+
 30 Dec 2022:
 Error while storing data from params.. Trying to solve.
 Later may be make a CRUD tetmplate
