@@ -1,6 +1,6 @@
 // API for courses.
 
-exports.addCourse = async function (new_item) {
+exports.addItem = async function (coll, new_item) {
   // Grab the text parameter.
   // this.name = name;
   // this.desc = desc;
@@ -8,7 +8,7 @@ exports.addCourse = async function (new_item) {
   // this.duration = duration;
   try {
     // var create_course_promise = global.pathdb.createCollection('courses', { reuseExisting: true });
-    var courses = global.pathdb.getCollection('courses');
+    var courses = global.pathdb.getCollection(coll);
   }
   catch (err) {
     console.log('Error connecting to collection. Ignore if this is first initiailisation of the function:' + err.message + ":");
@@ -32,10 +32,10 @@ exports.addCourse = async function (new_item) {
   }
 };
 
-exports.getAllCourses = async function () {
+exports.getAllItems = async function (coll) {
   try {
     var course_sublist_string;
-    var courses = global.pathdb.getCollection('courses');
+    var courses = global.pathdb.getCollection(coll);
     await courses.find().execute().then(course_sublist => {
       course_sublist_string = course_sublist.fetchAll();
       console.log("In course_list.js : " + JSON.stringify(course_sublist_string));

@@ -4,7 +4,6 @@
 // exports.makeUppercase = makeUppercase.makeUppercase;
 // exports.addMessage = addMessage.addMessage;
 const dotenv1 = require('dotenv').config({ path: './.env.local' });
-
 const functions = require("firebase-functions");
 
 const ini = require("./initApp");
@@ -50,46 +49,21 @@ app.use(express.urlencoded({
 // Parse JSON bodies (as sent by API clients)
 app.use(express.json());
 
-// build multiple CRUD interfaces:
-app.get('/courses/', async (req, res) => {
-    const course_list = require('./courses');
-    const course_sublist_string = await course_list.getAllCourses();
-    // console.log("In index.js: " + JSON.stringify(course_sublist_string));
-    res.status(200).json(course_sublist_string);
+app.get('/', (req, res) => {
+    res.json({ 'message': 'ok' });
+})
+const coursesRouter = require('./src/routes/courses.route');
+app.use('/courses', coursesRouter);
+
+/* Error handler middleware */
+app.use((err, req, res, next) => {
+    const statusCode = err.statusCode || 500;
+    console.error(err.message, err.stack);
+    res.status(statusCode).json({ 'message': err.message });
+
+    return;
 });
 
-
-app.post('/courses/', async (req, res) => {
-    const course_list = require('./courses');
-    // console.log("body. name in Index: " + req.body.name);
-    var new_course = { name: req.body.name, desc: req.body.desc, authors: req.body.authors, duration: req.body.duration };
-    // console.log ("New Course name is : " + JSON.stringify(new_course));
-    const added_count = await course_list.addCourse(JSON.stringify(new_course));
-    // console.log("Completed In index.js: " + added_count);
-    if (added_count > 0) {
-        res.status(200).json(added_count);
-    } else{
-        res.status(501).json("Error");
-    }
-});
-
-// app.post('/', (req, res) => {
-//     clist.addCourse();
-//     res.json({ 'Good message': 'post' });
-// });
-
-app.get('/:id', (req, res) => {
-    
-
-
-    
-});
-
-app.put('/:id', (req, res) => {
-    // clist.addCourse();
-});
-app.delete('/:id', (req, res) => {
-});
 
 
 // Expose Express API as a single Cloud Function:
