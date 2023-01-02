@@ -72,7 +72,7 @@ app.post('/', async (req, res) => {
 
     var new_course = { name: req.body.name, desc: req.body.desc, authors: req.body.authors, duration: req.body.duration };
     console.log ("New Course name is : " + JSON.stringify(new_course));
-    const added_count = await course_list.addCourse(new_course);
+    const added_count = await course_list.addCourse(JSON.stringify(new_course));
     console.log("Completed In index.js: " + added_count);
     if (added_count > 0) {
         res.status(200).json(added_count);

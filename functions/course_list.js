@@ -7,18 +7,18 @@ exports.addCourse = async function (new_item) {
   // this.authors = authors;
   // this.duration = duration;
   try {
-    // var create_course_promise = await global.pathdb.createCollection('courses', { reuseExisting: true });
-
+    // var create_course_promise = global.pathdb.createCollection('courses', { reuseExisting: true });
     var courses = global.pathdb.getCollection('courses');
   }
   catch (err) {
-    console.log('Error connecting to collection. Ignore if this is first initiailisation of the function : ' + err.message);
+    console.log('Error connecting to collection. Ignore if this is first initiailisation of the function:' + err.message + ":");
+
   }
   try {
     console.log("Doc in Func : " + new_item)
     // var added = await courses.add({ name: 'Laurie', age: 19 }).execute();
 
-  
+
     // var newDoc = { name: namee, description: 'Test Description' };
     var added = await courses.add(new_item).execute();
     console.log("Items count in Func : " + added.getAffectedItemsCount());
