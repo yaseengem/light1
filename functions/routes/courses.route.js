@@ -6,10 +6,10 @@ const coursesController = require('../controllers/courses.controller');
 router.get('/', coursesController.get);
   
 /* POST programming language */
-router.post('/', coursesController.create);
+router.put('/', coursesController.create);
 
 /* PUT programming language */
-router.put('/:id', coursesController.update);
+router.post('/:id', coursesController.update);
 
 /* DELETE programming language */
 router.delete('/:id', coursesController.remove);
