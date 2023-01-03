@@ -4,7 +4,7 @@ Tried to cople the best practice and my code. It is working fo read and write.. 
 Once that is done, and one API is completed finished, I will move to the next API, with the reusable model. I will try  to use the resusable plcaes from a common folder, and move the specific API ones into each folder.
 Good docmntation for mysql collection and devx. 
 https://dev.mysql.com/doc/x-devapi-userguide/en/crud-ebnf-collection-crud-functions.html#crud-ebnf-collectionfindfunction
-
+Good amoutn fo work is going in the mysql work.
 
 
 2 jan 2023:
