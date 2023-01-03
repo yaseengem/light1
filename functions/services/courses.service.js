@@ -12,7 +12,7 @@ async function getMultiple(page = 1) {
     //     [offset, config.listPerPage]
     // );
     const rows = await db.getMultiple(
-        'courses',
+        'courses'
     );
     const data = helper.emptyOrRows(rows);
     const meta = { page };
@@ -22,7 +22,7 @@ async function getMultiple(page = 1) {
     }
 }
 async function create(course) {
-    var new_course = { name: course.name, desc: course.desc, authors: course.authors, duration: course.duration };
+    var new_course = { name: course.body.name, desc: course.body.desc, authors: course.body.authors, duration: course.body.duration, rating: course.body.rating };
     console.log("New Course name is : " + JSON.stringify(new_course));
     const result = await db.create(
         'courses', JSON.stringify(new_course)

@@ -1,4 +1,10 @@
 Daily notes:
+3 Jan 2023:
+Tried to cople the best practice and my code. It is working fo read and write.. Also after changing skip to offsete, even that is working. Trynig to sort out the complete CRUD.
+Once that is done, and one API is completed finished, I will move to the next API, with the reusable model. I will try  to use the resusable plcaes from a common folder, and move the specific API ones into each folder.
+
+
+
 
 2 jan 2023:
 I have now solved the problems with the VM. Both the get and put works.. But a big task ahead is to be srcutre the folder. Which will probably make my ealrier code useless as there is a lto of code that may go in it from the best practice code.

@@ -32,15 +32,22 @@ exports.create = async function (coll, new_item) {
   }
 };
 
-exports.getMultiple = async function (coll) {
+
+// mysql-js> db.countryinfo.find().sort(["IndepYear desc"]).limit(8).skip(1)
+// ... [output removed]
+// 8 documents in set (0.00 sec)
+
+exports.getMultiple = async function (coll, searchstring = '', sortby = '["duration"]', limitno = 20, skipno = 0) {
   try {
-    var course_sublist_string;
-    var courses = global.pathdb.getCollection(coll);
-    await courses.find().execute().then(course_sublist => {
-      course_sublist_string = course_sublist.fetchAll();
-      console.log("In course_list.js : " + JSON.stringify(course_sublist_string));
-    });
-    return course_sublist_string;
+    var items_list;
+    var collection_name = global.pathdb.getCollection(coll);
+    var item_result = await collection_name.find().sort(sortby).limit(limitno).offset(2).execute();
+    // var item_result1 = await item_result.sort(sortby).limit(limitno);
+
+    var items_list = await item_result.fetchAll();
+    console.log("In dbservice.js : " + JSON.stringify(items_list));
+
+    return items_list;
   }
   catch (err) {
     console.log('Error reading from courses collection. Ignore if this is first initiailisation of the function : ' + err.message);
