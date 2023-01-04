@@ -103,8 +103,6 @@ exports.update = async function (coll, id, update_item) {
   }
 };
 
-
-
 exports.remove = async function (coll, id) {
   try {
     // var create_course_promise = global.pathdb.createCollection('courses', { reuseExisting: true });
