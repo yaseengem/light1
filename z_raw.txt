@@ -1,0 +1,20 @@
+In dbservice.js. coll: courses.... searchstring : .... sortby : duration.... limitcount : 10.... offsetno : 0
+>  Error reading from courses collection. Ignore if this is first initiailisation of the function : 
+>  -- PARSING FAILED --------------------------------------------------
+>  
+>  > 1 | name : /Mari/i
+>      |      ^
+>  
+>  Expected one of the following: 
+>  
+>  '!=', '%', '&&', '&', '*', '+', '-', '/', '<', '<<', '<=', '<>', '=', '==', '>', '>=', '>>', '^', 'and', 'between', 'div', 'in', 'is', 'like', 'not', 'or', 'overlaps', 'regexp', '|', '||'
+>  
+i  functions: Finished "api" in 29.022931ms
+
+
+>  > 1 | name like /Mari/i
+>      |           ^
+>  
+>  Expected one of the following: 
+>  
+>  '!', '"', '$', ''', '(', '+', '-', '.', ':', '[', '_', '`', 'cast', 'false', 'not', 'null', 'true', '{', '~', a digit, a letter

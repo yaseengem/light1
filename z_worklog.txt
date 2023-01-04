@@ -1,4 +1,9 @@
 Daily notes:
+
+4 Jan 2023:
+Sortis workingnow.
+
+
 3 Jan 2023:
 Tried to cople the best practice and my code. It is working fo read and write.. Also after changing skip to offsete, even that is working. Trynig to sort out the complete CRUD.
 Once that is done, and one API is completed finished, I will move to the next API, with the reusable model. I will try  to use the resusable plcaes from a common folder, and move the specific API ones into each folder.
