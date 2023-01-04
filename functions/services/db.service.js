@@ -104,3 +104,28 @@ exports.update = async function (coll, id, update_item) {
 };
 
 
+
+exports.remove = async function (coll, id) {
+  try {
+    // var create_course_promise = global.pathdb.createCollection('courses', { reuseExisting: true });
+    var collection_name = global.pathdb.getCollection(coll);
+  }
+  catch (err) {
+    console.log('Error connecting to collection. Ignore if this is first initiailisation of the function:' + err.message + ":");
+  }
+  try {
+    console.log("Deleting item  : id: " + id)
+    var deleted = await collection_name.remove("_id = '"+id+"'").execute();
+    console.log("Items count deleted : " + deleted.getAffectedItemsCount());
+    if (deleted.getAffectedItemsCount() > 0) {
+      return deleted.getAffectedItemsCount();
+    } else {
+      return 0;
+    }
+  }
+  catch (err) {
+    console.log('Error updating the item in courses collection. Ignore if this is first initiailisation of the function : ' + err.message);
+  }
+};
+
+

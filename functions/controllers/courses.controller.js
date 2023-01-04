@@ -35,6 +35,9 @@ async function update(req, res, next) {
 
 async function remove(req, res, next) {
   try {
+
+
+    console.log('Reached update function. Id is '+ req.query.id);
     res.json(await courses.remove(req.query.id));
   } catch (err) {
     console.error(`Error while deleting course`, err.message);
