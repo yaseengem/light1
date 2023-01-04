@@ -1,4 +1,4 @@
-const courses = require('./courses.service');
+const courses = require('./service');
 
 async function get(req, res, next) {
 

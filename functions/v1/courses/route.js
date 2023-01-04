@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const coursesController = require('./courses.controller');
+const coursesController = require('./controller');
 
 /* GET programming languages. */
 router.get('/', coursesController.get);

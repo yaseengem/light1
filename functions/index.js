@@ -52,7 +52,7 @@ app.use(express.json());
 app.get('/', (req, res) => {
     res.json({ 'message': 'ok' });
 })
-const coursesRouter = require('./v1/courses/courses.route');
+const coursesRouter = require('./v1/courses/route.js');
 app.use('/courses', coursesRouter);
 
 /* Error handler middleware */
