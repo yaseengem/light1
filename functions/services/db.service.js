@@ -1,5 +1,7 @@
 // API for courses.
 
+const { limit } = require("@firebase/firestore");
+
 exports.create = async function (coll, new_item) {
   // Grab the text parameter.
   // this.name = name;
@@ -37,11 +39,11 @@ exports.create = async function (coll, new_item) {
 // ... [output removed]
 // 8 documents in set (0.00 sec)
 
-exports.getMultiple = async function (coll, searchstring = '', sortby = '["duration"]', limitno = 20, skipno = 0) {
+exports.getMultiple = async function (coll, searchstring = "", sortby = "duration", limitcount = 20, offsetno = 0) {
   try {
     var items_list;
     var collection_name = global.pathdb.getCollection(coll);
-    var item_result = await collection_name.find().sort(sortby).limit(limitno).offset(2).execute();
+    var item_result = await collection_name.find().sort([sortby]).limit(limitcount).offset(offsetno).execute();
     // var item_result1 = await item_result.sort(sortby).limit(limitno);
 
     var items_list = await item_result.fetchAll();
