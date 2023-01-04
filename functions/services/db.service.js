@@ -39,10 +39,12 @@ exports.create = async function (coll, new_item) {
 // ... [output removed]
 // 8 documents in set (0.00 sec)
 
-exports.getMultiple = async function (coll, searchstring = "", sortby = "duration", limitcount = 20, offsetno = 0) {
+exports.get = async function (coll, searchstring, offsetno, limitcount, sortby) {
   try {
     var items_list;
     var collection_name = global.pathdb.getCollection(coll);
+    // console.log("In dbservice.js. offset is : " + offsetno);
+
     var item_result = await collection_name.find().sort([sortby]).limit(limitcount).offset(offsetno).execute();
     // var item_result1 = await item_result.sort(sortby).limit(limitno);
 

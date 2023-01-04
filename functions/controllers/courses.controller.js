@@ -1,17 +1,22 @@
 const courses = require('../services/courses.service');
 
 async function get(req, res, next) {
-  try {
-      res.json(await courses.getMultiple(req.query.page));
-  } catch (err) {
+  var single = req.body.single;
+  console.log("In the course controller.. Value is " + typeof single + single);
+    res.json(await courses.getMultiple(req));
+
+    try {
+      res.json(await courses.getMultiple(req));
+    } catch (err) {
       console.error(`Error while getting mutiple courses with query page`, err.message);
       next(err);
-  }
+    }
+  
 }
 
 async function create(req, res, next) {
   try {
-    
+
 
     res.json(await courses.create(req));
   } catch (err) {

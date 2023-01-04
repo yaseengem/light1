@@ -4,25 +4,25 @@ const db = require('./db.service');
 const helper = require(process.cwd() + '/utils/helper.util.js');
 const config = require(process.cwd() + '/configs/general.config');
 
-async function getMultiple(page = 1) {
-    const offset = helper.getOffset(page, config.listPerPage);
+async function getMultiple(req) {
+    // const offset = helper.getOffset(page, config.listPerPage);
     // const rows = await db.getMultiple(
     //     `SELECT id, name, released_year, githut_rank, pypl_rank, tiobe_rank 
     // FROM programming_languages LIMIT ?,?`,
     //     [offset, config.listPerPage]
     // );
-    const rows = await db.getMultiple(
-        'courses'
+    const rows = await db.get(
+        'courses', req.body.searchstring, req.body.offset, req.body.limit, req.body.sortby  
     );
     const data = helper.emptyOrRows(rows);
-    const meta = { page };
+    const meta = { offset : req.body.offset };
     return {
         data,
         meta
     }
 }
-async function create(course) {
-    var new_course = { name: course.body.name, desc: course.body.desc, authors: course.body.authors, duration: course.body.duration, rating: course.body.rating };
+async function create(req) {
+    var new_course = { name: req.body.name, desc: req.body.desc, authors: req.body.authors, duration: req.body.duration, rating: req.body.rating };
     console.log("New Course name is : " + JSON.stringify(new_course));
     const result = await db.create(
         'courses', JSON.stringify(new_course)
@@ -72,7 +72,7 @@ async function remove(id) {
 }
 
 module.exports = {
-    getMultiple,
+    getMultiple: getMultiple,
     create,
     update,
     remove
