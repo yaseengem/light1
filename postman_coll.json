@@ -61,7 +61,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses?id=000063b2b280000000000000004d",
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses?id=000063b2b280000000000000004c",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -79,7 +79,7 @@
 					"query": [
 						{
 							"key": "id",
-							"value": "000063b2b280000000000000004d"
+							"value": "000063b2b280000000000000004c"
 						}
 					]
 				}
@@ -127,7 +127,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": " { \n            \"name\": \"11-2\",\n            \"desc\": \"maneers training\",\n            \"author\": \"jDannyfgfdf fdjkdv\",\n            \"duration\": 1200\n\n }",
+					"raw": " { \n            \"name\": \"11-2\",\n            \"desc\": \"maneers training\",\n            \"author\": \"jDannyfgfdf fdjkdv\",\n            \"duration\": 120\n\n }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -154,6 +154,46 @@
 						{
 							"key": "id",
 							"value": "000063b2b280000000000000004d"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n            \"name\": \"11-2\",\n            \"desc\": \"maneers training\",\n            \"author\": \"jDannyfgfdf fdjkdv\",\n            \"duration\": 1200\n\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses?id=000063b2b280000000000000004c",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"functest-f4a98",
+						"us-central1",
+						"api",
+						"courses"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "000063b2b280000000000000004c"
 						}
 					]
 				}
