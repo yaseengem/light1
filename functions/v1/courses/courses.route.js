@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const coursesController = require('../controllers/courses.controller');
+const coursesController = require('./courses.controller');
 
 /* GET programming languages. */
 router.get('/', coursesController.get);
@@ -16,5 +16,6 @@ router.post('/', coursesController.update);
 
 /* DELETE programming language */
 router.delete('/', coursesController.remove);
+
 
 module.exports = router;

@@ -61,7 +61,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses?id=000063b2b280000000000000004c",
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses?id=000063b2b280000000000000004e",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -79,7 +79,7 @@
 					"query": [
 						{
 							"key": "id",
-							"value": "000063b2b280000000000000004c"
+							"value": "000063b2b280000000000000004e"
 						}
 					]
 				}
@@ -93,7 +93,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": " { \n            \"name\": \"Course -1\",\n            \"desc\": \"maneers training\",\n            \"author\": \"jDannyfgfdf fdjkdv\",\n            \"duration\": 240\n\n }",
+					"raw": " { \n            \"name\": \"Course -1\",\n            \"desc\": \"maneers training\",\n            \"author\": \"jDannyfgfdf fdjkdv\",\n            \"duration\": 245\n\n }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -127,7 +127,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": " { \n            \"name\": \"11-2\",\n            \"desc\": \"maneers training\",\n            \"author\": \"jDannyfgfdf fdjkdv\",\n            \"duration\": 120\n\n }",
+					"raw": " { \n            \"name\": \"11-2\",\n            \"desc\": \"maneers training\",\n            \"author\": \"jDannyfgfdf fdjkdv\",\n            \"duration\": 3434\n\n }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -135,7 +135,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses?id=000063b2b280000000000000004d",
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses?id=000063b2b280000000000000004e",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -153,7 +153,7 @@
 					"query": [
 						{
 							"key": "id",
-							"value": "000063b2b280000000000000004d"
+							"value": "000063b2b280000000000000004e"
 						}
 					]
 				}
@@ -175,7 +175,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses?id=000063b2b280000000000000004c",
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses?id=000063b2b280000000000000004e",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -193,7 +193,7 @@
 					"query": [
 						{
 							"key": "id",
-							"value": "000063b2b280000000000000004c"
+							"value": "000063b2b280000000000000004e"
 						}
 					]
 				}

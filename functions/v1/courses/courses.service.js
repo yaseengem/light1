@@ -1,4 +1,4 @@
-const db = require('./db.service');
+const db = require('../../common/db.service');
 const helper = require(process.cwd() + '/utils/helper.util.js');
 const config = require(process.cwd() + '/configs/general.config');
 
