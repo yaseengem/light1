@@ -24,7 +24,9 @@ async function create(req, res, next) {
 
 async function update(req, res, next) {
   try {
-    res.json(await courses.update(req.params.id, req.body));
+
+    console.log('Reached update function. Id is '+ req.query.id);
+    res.json(await courses.update(req.query.id, req));
   } catch (err) {
     console.error(`Error while updating course`, err.message);
     next(err);
@@ -33,7 +35,7 @@ async function update(req, res, next) {
 
 async function remove(req, res, next) {
   try {
-    res.json(await courses.remove(req.params.id));
+    res.json(await courses.remove(req.query.id));
   } catch (err) {
     console.error(`Error while deleting course`, err.message);
     next(err);

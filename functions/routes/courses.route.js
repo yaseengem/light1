@@ -9,9 +9,12 @@ router.get('/', coursesController.get);
 router.put('/', coursesController.create);
 
 /* PUT programming language */
-router.post('/:id', coursesController.update);
+router.post('/', coursesController.update);
+
+/* PUT programming language */
+// router.post('/:id', coursesController.update);
 
 /* DELETE programming language */
-router.delete('/:id', coursesController.remove);
+router.delete('/', coursesController.remove);
 
 module.exports = router;

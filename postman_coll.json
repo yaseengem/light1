@@ -16,7 +16,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": " { \n            \"single\": false,\n            \"_id\": \"maneers training\",\n            \"offset\": 0,\n            \"limit\": 10,\n            \"sortby\" : \"duration\"\n\n }",
+					"raw": " { \n            \"multi\": true,\n            \"_id\": \"maneers training\",\n            \"offset\": 0,\n            \"limit\": 10,\n            \"sortby\" : \"duration\"\n\n }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -53,7 +53,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": " { \n            \"single\": false,\n            \"_id\": \"maneers training\",\n            \"offset\": 0,\n            \"limit\": 10,\n            \"sortby\" : \"duration\"\n\n }",
+					"raw": " { \n            \"multi\": false\n\n }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -61,7 +61,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses",
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses?id=000063b2b280000000000000004d",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -75,6 +75,12 @@
 						"us-central1",
 						"api",
 						"courses"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "000063b2b280000000000000004d"
+						}
 					]
 				}
 			},
@@ -109,6 +115,46 @@
 						"us-central1",
 						"api",
 						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n            \"name\": \"11-2\",\n            \"desc\": \"maneers training\",\n            \"author\": \"jDannyfgfdf fdjkdv\",\n            \"duration\": 1200\n\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses?id=000063b2b280000000000000004d",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"functest-f4a98",
+						"us-central1",
+						"api",
+						"courses"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "000063b2b280000000000000004d"
+						}
 					]
 				}
 			},
