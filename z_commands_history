@@ -129,3 +129,12 @@
 
 
 
+GIt fresh setup.. 
+   49  git config --global user.name "Yaseen Mohammed"
+   50  git config --global user.email "yaseengem@gmail.com'
+   51  git config --global user.email "yaseengem@gmail.com"
+   52  git config 
+   53  git config   --list
+   54  exit
+   55  history
+Using vscode login to the git
