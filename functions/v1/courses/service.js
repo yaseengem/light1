@@ -9,6 +9,7 @@ async function get(req) {
         );
         const data = helper.emptyOrRows(rows);
         const meta = { offset: req.body.offset };
+        console.log ("Completed exeuting the get multi function in courses");
         return {
             data,
             meta
@@ -21,6 +22,7 @@ async function get(req) {
         );
         const data = helper.emptyOrRows(rows);
         const meta = {};
+        console.log ("Completed exeuting the get one function in courses");
         return {
             data,
             meta
@@ -38,6 +40,7 @@ async function create(req) {
     if (result) {
         message = 'Course created successfully';
     }
+    console.log ("Completed exeuting the create function in courses");
     return { message };
 }
 
@@ -51,6 +54,7 @@ async function update(id, req) {
     if (result) {
         message = 'Course updated successfully';
     }
+    console.log ("Completed exeuting the update function in courses");
     return { message };
 }
 
@@ -60,6 +64,7 @@ async function remove(id) {
     if (result) {
         message = 'Course deleted successfully';
     }
+    console.log ("Completed exeuting the remove function in courses");
     return { message };
 }
 

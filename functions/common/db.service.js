@@ -9,11 +9,12 @@ exports.create = async function (coll, new_item) {
   // this.authors = authors;
   // this.duration = duration;
   try {
-    // var create_course_promise = global.pathdb.createCollection('courses', { reuseExisting: true });
+    var create_course_promise = global.pathdb.createCollection('courses', { reuseExisting: true });
     var collection_name = global.pathdb.getCollection(coll);
   }
   catch (err) {
     console.log('Error connecting to collection. Ignore if this is first initiailisation of the function:' + err.message + ":");
+    return 0;
 
   }
   try {
@@ -31,7 +32,10 @@ exports.create = async function (coll, new_item) {
   }
   catch (err) {
     console.log('Error creating the item in courses collection. Ignore if this is first initiailisation of the function : ' + err.message);
+    return 0;
+
   }
+  return 0;
 };
 
 
@@ -42,12 +46,12 @@ exports.create = async function (coll, new_item) {
 exports.get = async function (coll, id) {
   try {
 
-    console.log("In dbservice.js id : " +id);
+    console.log("In dbservice.js id : " + id);
     var items_list;
     var collection_name = global.pathdb.getCollection(coll);
     // console.log("In dbservice.js. offset is : " + offsetno);
 
-    var item_result = await collection_name.find("_id = '"+id+"'").execute();
+    var item_result = await collection_name.find("_id = '" + id + "'").execute();
     var items_list = await item_result.fetchOne();
     console.log("In dbservice.js item: " + JSON.stringify(items_list));
 
@@ -56,6 +60,7 @@ exports.get = async function (coll, id) {
   catch (err) {
     console.log('Error reading from courses collection. Ignore if this is first initiailisation of the function : ' + err.message);
   }
+  return 0;
 };
 
 
@@ -76,6 +81,7 @@ exports.getMulti = async function (coll, searchstring, offsetno, limitcount, sor
   catch (err) {
     console.log('Error reading from courses collection. Ignore if this is first initiailisation of the function : ' + err.message);
   }
+  return 0;
 };
 
 
@@ -89,7 +95,7 @@ exports.update = async function (coll, id, update_item) {
   }
   try {
     console.log("Updating item values : id: " + id + "  Updating values: " + update_item)
-    var updated = await collection_name.modify("_id = '"+id+"'")
+    var updated = await collection_name.modify("_id = '" + id + "'")
       .patch(update_item).execute();
     console.log("Items count updated : " + updated.getAffectedItemsCount());
     if (updated.getAffectedItemsCount() > 0) {
@@ -101,6 +107,7 @@ exports.update = async function (coll, id, update_item) {
   catch (err) {
     console.log('Error updating the item in courses collection. Ignore if this is first initiailisation of the function : ' + err.message);
   }
+  return 0;
 };
 
 exports.remove = async function (coll, id) {
@@ -113,7 +120,7 @@ exports.remove = async function (coll, id) {
   }
   try {
     console.log("Deleting item  : id: " + id)
-    var deleted = await collection_name.remove("_id = '"+id+"'").execute();
+    var deleted = await collection_name.remove("_id = '" + id + "'").execute();
     console.log("Items count deleted : " + deleted.getAffectedItemsCount());
     if (deleted.getAffectedItemsCount() > 0) {
       return deleted.getAffectedItemsCount();
@@ -124,6 +131,7 @@ exports.remove = async function (coll, id) {
   catch (err) {
     console.log('Error updating the item in courses collection. Ignore if this is first initiailisation of the function : ' + err.message);
   }
+  return 0;
 };
 
 
