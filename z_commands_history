@@ -1,4 +1,88 @@
 
+  Install firebase
+
+   34  curl -sL https://firebase.tools | bash
+   35  sudo apt  install curl
+   36  firebase login
+   37  firebase list:projects
+
+   Need install java also
+   sudo apt install -y openjdk-18-jdk
+
+     firebase emulators:start
+   39  history
+
+  453  history
+  
+
+
+
+  Run Emulator first time:
+  444  cd pro
+  445  mkdir functest
+  446  cd functest/
+  447  npm install -g firebase-tools
+  448  sudo npm install -g firebase-tools
+  449  firebase login
+  450  firebase init firestore
+  451  firebase init functions
+  452  code .
+
+
+Delpoy to Firebase cloud
+
+
+  424  firebase use dev
+  425  firebase emulators:start
+  426  firebase deploy --only functions
+
+
+
+107  ps -ef | grep java
+  108  ps -ef | more
+  109  sudo kill 4260
+  110  sudo kill 3091
+  111  history
+
+
+
+
+Install Mysql
+    sudo  apt update
+    sudo apt install mysql-server
+    sudo systemctl start mysql.service
+    sudo mysql
+    systemctl status mysql.service
+    mysql -u yaseen -p
+    sudo  apt update
+    sudo apt install mysql-workbench-community   - May not be working Use the next command
+    sudo  snap install mysql-workbench-community
+
+Create a user locally in MYSQL
+CREATE USER 'yaseen'@'localhost' IDENTIFIED BY 'Inno12!@';
+GRANT ALL PRIVILEGES ON *.* TO 'yaseen'@'localhost' WITH GRANT OPTION;
+
+SOlve the Armor policy error while connecting to Mysql using workbench.
+snap connect mysql-workbench-community:password-manager-service
+snap connect mysql-workbench-community:ssh-keys
+
+
+
+GIt fresh setup.. 
+git config --global user.name "Yaseen Mohammed"
+git config --global user.email "yaseengem@gmail.com"
+git config --global user.email "yaseengem@gmail.com"
+ git config   --list
+Using vscode login to the git
+
+
+
+Install GOogle chrome
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
+sudo apt install ./google-chrome-stable_current_amd64.deb 
+
+
+
   363  git clone https://github.com/flutter/codelabs.git flutter-codelabs
   364  ls
   365  cd flutter-codelabs/
@@ -80,73 +164,4 @@
   441  cd..
   442  cd ..
   443  firebase emulators:start
-  444  cd pro
-  445  mkdir functest
-  446  cd functest/
-  447  npm install -g firebase-tools
-  448  sudo npm install -g firebase-tools
-  449  firebase login
-  450  firebase init firestore
-  451  firebase init functions
-  452  code .
-
-
-   34  curl -sL https://firebase.tools | bash
-   35  sudo apt  install curl
-   36  firebase login
-   37  firebase list:projects
-   Need install java also
-   sudo apt install -y openjdk-18-jdk
-   38  firebase emulators:start
-   39  history
-
-  453  history
-  
-
-
-
-
-107  ps -ef | grep java
-  108  ps -ef | more
-  109  sudo kill 4260
-  110  sudo kill 3091
-  111  history
-
-
-
-
-Install Mysql
-    sudo  apt update
-    sudo apt install mysql-server
-    sudo systemctl start mysql.service
-    sudo mysql
-    systemctl status mysql.service
-    mysql -u yaseen -p
-    sudo  apt update
-    sudo apt install mysql-workbench-community   - May not be working Use the next command
-    sudo  snap install mysql-workbench-community
-
-Create a user locally in MYSQL
-CREATE USER 'yaseen'@'localhost' IDENTIFIED BY 'Inno12!@';
-GRANT ALL PRIVILEGES ON *.* TO 'yaseen'@'localhost' WITH GRANT OPTION;
-
-SOlve the Armor policy error while connecting to Mysql using workbench.
-snap connect mysql-workbench-community:password-manager-service
-snap connect mysql-workbench-community:ssh-keys
-
-
-
-GIt fresh setup.. 
-git config --global user.name "Yaseen Mohammed"
-git config --global user.email "yaseengem@gmail.com"
-git config --global user.email "yaseengem@gmail.com"
- git config   --list
-Using vscode login to the git
-
-
-
-Install GOogle chrome
-wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb 
-sudo apt install ./google-chrome-stable_current_amd64.deb 
-
 
