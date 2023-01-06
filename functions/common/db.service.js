@@ -9,7 +9,7 @@ exports.create = async function (coll, new_item) {
   // this.authors = authors;
   // this.duration = duration;
   try {
-    var create_course_promise = global.pathdb.createCollection('courses', { reuseExisting: true });
+    // var create_course_promise = global.pathdb.createCollection('courses', { reuseExisting: true });
     var collection_name = global.pathdb.getCollection(coll);
   }
   catch (err) {

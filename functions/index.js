@@ -68,6 +68,6 @@ app.use((err, req, res, next) => {
 
 // Expose Express API as a single Cloud Function:
 exports.api = functions
-    .runWith({ memory: '256MB', timeoutSeconds: 60 })
+    .runWith({ memory: '256MB', timeoutSeconds: 120 })
     .https.onRequest(app);
 
