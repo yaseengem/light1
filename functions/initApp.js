@@ -37,17 +37,16 @@ exports.setEnv = function () {
     host = '34.148.118.236';
     port = 33060;
     username = 'yaseen';
-    passw = 'Inno12!@'; 
-    console.log("cloud instance used.")   
-
+    passw = 'Inno12!@';
+    console.log("cloud instance used.");
   }
   else {
 
     host = 'localhost';
     port = 33060;
     username = 'yaseen';
-    passw = 'Inno12!@';   
-    console.log("local emulator used.")  
+    passw = 'Inno12!@';
+    console.log("local emulator used.");
   }
   global.host = host;
   global.port = port;
