@@ -34,7 +34,7 @@ var passw;
 exports.setEnv = function () {
   if (!process.env.FUNCTIONS_EMULATOR) {
     //DO STUFF SPECIFIC TO EMULATOR ENVIRONMENT
-    host = '34.148.109.43';
+    host = '34.148.118.236';
     port = 33060;
     username = 'yaseen';
     passw = 'Inno12!@'; 
