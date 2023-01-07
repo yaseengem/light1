@@ -7,14 +7,13 @@ Login to chrome with yaseen gem gmail
 Postman logged in
 COnnected to mysql using workbench
 Backed up here.
-
-
-
-v0.x
+v0.6
 Insatlling curl. nvm (using the installing process at https://github.com/nvm-sh/nvm)
 Installing Node and npm latest versions using nvm at the same time iwth single command
 Installing Firebase cli via build
 Running the emulator
+Perfectly working and strated the coding with this vm now. No more backup from here on. for backend coding.
 
+v0.x  - Using this VM now for dvelopment.
 
 
