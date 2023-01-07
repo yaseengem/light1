@@ -74,7 +74,7 @@ GIt fresh setup..
 git config --global user.name "Yaseen Mohammed"
 git config --global user.email "yaseengem@gmail.com"
  git config   --list
-Using vscode login to the git
+Using vscode login to the git with a psuh to some repo (or this one)
 
 
 
