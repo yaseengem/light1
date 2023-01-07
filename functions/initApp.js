@@ -29,6 +29,8 @@ var host;
 var port;
 var username;
 var passw;
+
+
 exports.setEnv = function () {
   if (process.env.FUNCTIONS_EMULATOR == false) {
     //DO STUFF SPECIFIC TO EMULATOR ENVIRONMENT
@@ -75,9 +77,6 @@ exports.connectSQL = function () {
 
       var coll_promise = pathdb.createCollection('courses', { reuseExisting: true });
       var courses = pathdb.getCollection('courses');
-
-      var questions = pathdb.getCollection('questions');
-      global.questions - questions;
 
       // var myColl = pathdb.createCollection('my_collection');
     });
