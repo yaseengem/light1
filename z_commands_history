@@ -7,7 +7,9 @@
    37  firebase list:projects
 
    Need install java also
-   sudo apt install -y openjdk-18-jdk
+   sudo apt install -y openjdk-18-jdk 
+   Or
+   sudo apt install default-jre
    Or use this website for even latest edition
    https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-22-04
 
