@@ -32,7 +32,7 @@ var passw;
 
 
 exports.setEnv = function () {
-  if (process.env.FUNCTIONS_EMULATOR == false) {
+  if (!process.env.FUNCTIONS_EMULATOR) {
     //DO STUFF SPECIFIC TO EMULATOR ENVIRONMENT
     host = '34.148.109.43';
     port = 33060;
