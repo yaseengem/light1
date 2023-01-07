@@ -1,0 +1,20 @@
+V 0.3 - Installed all but the firebase emulatro is not working.
+v0.4 - Insatlled fresh OS. ANd upgraded the packages.. Nothing instaled.
+v0.5 - WIP. Started 
+installing. VSCode, CHrome, POstman, Java,  -from SOftware aplication
+mysql, andworkbench, git install, correct apparmor error
+Login to chrome with yaseen gem gmail
+Postman logged in
+COnnected to mysql using workbench
+Backed up here.
+
+
+
+v0.x
+Insatlling curl. nvm (using the installing process at https://github.com/nvm-sh/nvm)
+Installing Node and npm latest versions using nvm at the same time iwth single command
+Installing Firebase cli via build
+Running the emulator
+
+
+

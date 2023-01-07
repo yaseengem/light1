@@ -47,6 +47,14 @@ Delpoy to Firebase cloud
   111  history
 
 
+Insatlling curl. nvm (using the installing process at https://github.com/nvm-sh/nvm)
+Installing Node and npm latest versions using nvm at the same time iwth single command
+     sudo apt  install curl
+     curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+     nvm
+     nvm install node
+     node -v
+     npm -v
 
 
 Install Mysql
