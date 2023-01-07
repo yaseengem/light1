@@ -73,7 +73,6 @@ snap connect mysql-workbench-community:ssh-keys
 GIt fresh setup.. 
 git config --global user.name "Yaseen Mohammed"
 git config --global user.email "yaseengem@gmail.com"
-git config --global user.email "yaseengem@gmail.com"
  git config   --list
 Using vscode login to the git
 
