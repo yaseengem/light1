@@ -8,6 +8,8 @@
 
    Need install java also
    sudo apt install -y openjdk-18-jdk
+   Or use this website for even latest edition
+   
 
      firebase emulators:start
    39  history
