@@ -1,5 +1,11 @@
 Daily notes:
 
+8 Jan 2023:
+Installed all on new machine.. All good.. 
+Deployed func to cloud.
+.Just hello working on cloud. Issue with communicating with the SQL server on cloud. So planing to put it on the VM with firebase emulator.
+
+
 4 Jan 2023:
 Sortis workingnow.
 Solved all CRUD used cases.. Some troble with the  find as it is not taking the search string.. That needs to be sorted later as a reequirement.
