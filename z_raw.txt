@@ -18,3 +18,28 @@ i  functions: Finished "api" in 29.022931ms
 >  Expected one of the following: 
 >  
 >  '!', '"', '$', ''', '(', '+', '-', '.', ':', '[', '_', '`', 'cast', 'false', 'not', 'null', 'true', '{', '~', a digit, a letter
+
+
+
+Working query json format. Put this in body, json format.
+ { 
+            "multi": true,
+            "_id": "maneers training",
+            "offset": 0,
+            "limit": 10,
+            "sortby" : "duration",
+            "searchstring" : "_id = '000063b96cdc0000000000000003'"  -working
+
+            "searchstring" : "_id like '%00063b96cdc000000000%'" - working
+
+            "searchstring" : "_id like '%00063b96cdc0000000000000003'" - working
+
+            "searchstring" : "_id like '%00063b96cdc00000000000000%' && _id like '000063b96cdc0000000000000002'" - Working
+
+            "searchstring" : "_id like '%00063b96cdc00000000000000%' && name like 'Cou%'" - Working perfectly fine.
+
+
+ }
+
+
+

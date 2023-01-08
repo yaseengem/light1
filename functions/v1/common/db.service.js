@@ -70,7 +70,9 @@ exports.getMulti = async function (coll, searchstring, offsetno, limitcount, sor
     var collection_name = global.pathdb.getCollection(coll);
     // console.log("In dbservice.js. offset is : " + offsetno);
 
-    var item_result = await collection_name.find().sort([sortby]).limit(limitcount).offset(offsetno).execute();
+    // var searchstring = "";
+
+    var item_result = await collection_name.find(searchstring).sort([sortby]).limit(limitcount).offset(offsetno).execute();
     // var item_result1 = await item_result.sort(sortby).limit(limitno);
 
     var items_list = await item_result.fetchAll();
