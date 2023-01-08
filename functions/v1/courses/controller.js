@@ -42,7 +42,7 @@ async function remove(req, res, next) {
   } catch (err) {
     console.error(`Error while deleting course`, err.message);
     next(err);
-  }
+  } 
 }
 
 module.exports = {
