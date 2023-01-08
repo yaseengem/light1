@@ -4,6 +4,7 @@ Daily notes:
 Installed all on new machine.. All good.. 
 Deployed func to cloud.
 .Just hello working on cloud. Issue with communicating with the SQL server on cloud. So planing to put it on the VM with firebase emulator.
+Solved the search also in mysql.. Put the searchstring in the fine func.. DOnt have it in requst if you want all requests.. But if you want specific strings, just give the string.. String patterm is in the info.. But something like this.. "searchstring" : "_id like '%00063b96cdc00000000000000%' && name like 'Cou%'" - Working perfectly fine.
 
 
 4 Jan 2023:
