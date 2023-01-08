@@ -11,7 +11,7 @@ Sortis workingnow.
 Solved all CRUD used cases.. Some troble with the  find as it is not taking the search string.. That needs to be sorted later as a reequirement.
 A good point to take a restart.
 Moving to shuffle the files in a single folder for each API. Done.
-
+Sample code for CRUD is here.. https://github.com/atharvadeosthale/rest-api-mysql-article
 
 3 Jan 2023:
 Tried to cople the best practice and my code. It is working fo read and write.. Also after changing skip to offsete, even that is working. Trynig to sort out the complete CRUD.
