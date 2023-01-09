@@ -4,6 +4,7 @@ Daily notes:
 Completed building the APIs for coureses.. 
 Replicated the same files of courses to gusers.. GUsers is guardian Users (more like parents).
 Gusers API is working fine. 
+Milestone here as of today.
 
 8 Jan 2023:
 Installed all on new machine.. All good.. 
