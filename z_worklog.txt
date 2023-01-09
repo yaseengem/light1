@@ -1,7 +1,9 @@
 Daily notes:
 
 9 Dec 2023:
-Completed building the APIs for coureses.. Just before moving to the 
+Completed building the APIs for coureses.. 
+Replicated the same files of courses to gusers.. GUsers is guardian Users (more like parents).
+Gusers API is working fine. 
 
 8 Jan 2023:
 Installed all on new machine.. All good.. 
