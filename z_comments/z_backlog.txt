@@ -1,0 +1,12 @@
+====== Next items ==========
+
+
+Backlog before go live=========
+
+Backlog items after go live of first version=========
+Refine the API templates and replicate - COntinuous task.
+
+
+
+Completed=========
+Build two fnctions in separate files.
