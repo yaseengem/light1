@@ -23,12 +23,9 @@ exports.create = async function (coll, new_item) {
     // var newDoc = { name: namee, description: 'Test Description' };
     var added = await collection_name.add(new_item).execute();
     console.log("Items count in Func : " + added.getAffectedItemsCount());
-    if (added.getAffectedItemsCount() > 0) {
-      return added.getAffectedItemsCount();
-    } else {
-      return 0;;
-    }
-    // return added.getAffectedItemsCount();
+    console.log("Id of the creaeted item : " + added.getGeneratedIds());
+    return added.getGeneratedIds();
+
   }
   catch (err) {
     console.log('Error creating the item in courses collection. Ignore if this is first initiailisation of the function : ' + err.message);

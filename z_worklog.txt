@@ -1,5 +1,8 @@
 Daily notes:
 
+9 Dec 2023:
+Completed building the APIs for coureses.. Just before moving to the 
+
 8 Jan 2023:
 Installed all on new machine.. All good.. 
 Deployed func to cloud.

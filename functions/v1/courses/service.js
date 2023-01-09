@@ -1,4 +1,4 @@
-const db = require('../common/db.service');
+const db = require('../../common/db.service');
 const helper = require(process.cwd() + '/utils/helper.util.js');
 const config = require(process.cwd() + '/configs/general.config');
 
@@ -9,7 +9,7 @@ async function get(req) {
         );
         const data = helper.emptyOrRows(rows);
         const meta = { offset: req.body.offset };
-        console.log ("Completed exeuting the get multi function in courses");
+        console.log("Completed exeuting the get multi function in courses");
         return {
             data,
             meta
@@ -22,7 +22,7 @@ async function get(req) {
         );
         const data = helper.emptyOrRows(rows);
         const meta = {};
-        console.log ("Completed exeuting the get one function in courses");
+        console.log("Completed exeuting the get one function in courses");
         return {
             data,
             meta
@@ -33,15 +33,20 @@ async function get(req) {
 async function create(req) {
     var new_course = { name: req.body.name, desc: req.body.desc, authors: req.body.authors, duration: req.body.duration, rating: req.body.rating };
     console.log("New Course name is : " + JSON.stringify(new_course));
-    const result = await db.create(
+    const createdId = await db.create(
         'courses', JSON.stringify(new_course)
     );
+    console.log("Completed cerating course. Id :" + createdId);
     let message = 'Error in creating course';
-    if (result) {
+    if (createdId != '0') {
+
+        console.log("Send back the created id :" + createdId);
         message = 'Course created successfully';
+        return { message, createdId };
+    } else {
+
+        return { message };
     }
-    console.log ("Completed exeuting the create function in courses");
-    return { message };
 }
 
 async function update(id, req) {
@@ -54,7 +59,7 @@ async function update(id, req) {
     if (result) {
         message = 'Course updated successfully';
     }
-    console.log ("Completed exeuting the update function in courses");
+    console.log("Completed exeuting the update function in courses");
     return { message };
 }
 
@@ -64,7 +69,7 @@ async function remove(id) {
     if (result) {
         message = 'Course deleted successfully';
     }
-    console.log ("Completed exeuting the remove function in courses");
+    console.log("Completed exeuting the remove function in courses");
     return { message };
 }
 

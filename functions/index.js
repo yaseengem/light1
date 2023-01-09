@@ -6,7 +6,7 @@
 const dotenv1 = require('dotenv').config({ path: './.env.local' });
 const functions = require("firebase-functions");
 
-const ini = require("./initApp");
+const ini = require("./common/initApp");
 ini.setEnv();
 ini.initApp();
 ini.connectSQL();
