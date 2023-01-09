@@ -55,6 +55,13 @@ app.get('/', (req, res) => {
 const coursesRouter = require('./v1/courses/route.js');
 app.use('/courses', coursesRouter);
 
+const gusersRouter = require('./v1/gusers/route.js');
+app.use('/gusers', gusersRouter);
+
+
+date_test = new Date();
+console.log ("Date is : ", date_test);
+
 /* Error handler middleware */
 app.use((err, req, res, next) => {
     const statusCode = err.statusCode || 500;

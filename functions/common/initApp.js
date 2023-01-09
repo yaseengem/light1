@@ -74,8 +74,11 @@ exports.connectSQL = function () {
         });
       global.pathdb = pathdb;
 
-      var coll_promise = pathdb.createCollection('courses', { reuseExisting: true });
+      var course_promise = pathdb.createCollection('courses', { reuseExisting: true });
       var courses = pathdb.getCollection('courses');
+
+      var gusers_promise = pathdb.createCollection('gusers', { reuseExisting: true });
+      var gusers = pathdb.getCollection('gusers');
 
       // var myColl = pathdb.createCollection('my_collection');
     });
