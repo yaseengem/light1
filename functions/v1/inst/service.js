@@ -1,7 +1,7 @@
 const db = require('../../common/db.service');
 const helper = require(process.cwd() + '/utils/helper.util.js');
 const config = require(process.cwd() + '/configs/general.config');
-const c_name = 'org';
+const c_name = 'inst';
 async function get(req) {
     if (req.body.multi) {
         const rows = await db.getMulti(
@@ -31,7 +31,7 @@ async function get(req) {
 }
 
 async function create(req) {
-    var new_item = { name: req.body.name, admin_user_id: req.body.admin_user_id, main_office: req.body.main_office, created_time: req.body.created_time, inst_list :req.body.inst_list  };
+    var new_item = { name: req.body.name, admin_user_id: req.body.admin_user_id, address: req.body.address, created_time: req.body.created_time, org: req.body.org };
     console.log("New Course name is : " + JSON.stringify(new_item));
     const createdId = await db.create(
         c_name, JSON.stringify(new_item)
@@ -40,17 +40,16 @@ async function create(req) {
     let message = "Error in creating in " + c_name;
     if (createdId != '0') {
 
-        console.log("Sending back the created " + c_name + " id :" + createdId);
+        console.log("Send back the created " + c_name + " id :" + createdId);
         message = c_name + ' created successfully';
         return { message, createdId };
     } else {
-
         return { message };
     }
 }
 
 async function update(id, req) {
-    var update_course = { name: req.body.name, admin_user_id: req.body.admin_user_id, main_office: req.body.main_office, created_time: req.body.created_time };
+    var update_course = { name: req.body.name, admin_user_id: req.body.admin_user_id, address: req.body.address, created_time: req.body.created_time };
     console.log("Updated Course is : " + JSON.stringify(update_course));
     const result = await db.update(
         c_name, id, JSON.stringify(update_course)

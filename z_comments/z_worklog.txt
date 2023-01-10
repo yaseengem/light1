@@ -1,4 +1,10 @@
 Daily notes:
+10 Dec 2023:
+Just added the apis for org, inst.. BIt of finetuning.. 
+Just realised that I can use the object as itis from the req.body.item.xxx. This will simplify the API ceration. I will do that for the next APIs.
+
+
+
 
 9 Dec 2023:
 Completed building the APIs for coureses.. 
