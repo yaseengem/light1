@@ -59,6 +59,10 @@ const gusersRouter = require('./v1/gusers/route.js');
 app.use('/gusers', gusersRouter);
 
 
+const orgRouter = require('./v1/org/route.js');
+app.use('/org', orgRouter);
+
+
 date_test = new Date();
 console.log ("Date is : ", date_test);
 

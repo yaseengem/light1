@@ -80,6 +80,9 @@ exports.connectSQL = function () {
       var gusers_promise = pathdb.createCollection('gusers', { reuseExisting: true });
       var gusers = pathdb.getCollection('gusers');
 
+      var org_promise = pathdb.createCollection('org', { reuseExisting: true });
+      var org_promise = pathdb.getCollection('org');
+
       // var myColl = pathdb.createCollection('my_collection');
     });
     // pathdb = mySession.getSchema('pathdb');
