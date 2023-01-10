@@ -22,4 +22,8 @@ vk0.x - Taken from v0.5. For experimenting on Kubernetes.
 THis will be experimental VM Only. Can be deleted as well.
 
 
+Ubuntu L - Light related work
+Ubuntu K - Kubernetes work. vk0.x
+
+
 
