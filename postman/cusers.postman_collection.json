@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "0b09703d-917e-4769-b22e-a20ab68cf1e1",
-		"name": "Gusers",
+		"_postman_id": "1998bdc0-0cd2-41f5-aa77-1a60240abaf3",
+		"name": "cusers",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "5043632"
 	},
@@ -16,7 +16,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": " { \n            \"multi\": true,\n            \"offset\": 0,\n            \"limit\": 10,\n            \"sortby\" : \"duration\",\n            \"uid\": \"012345\"\n\n }\n",
+					"raw": " { \n            \"multi\": true,\n            \"offset\": 0,\n            \"limit\": 10,\n            \"sortby\" : \"duration\",\n            \"uid\": \"012345\"\n }\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -24,7 +24,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/gusers",
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/cusers",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -37,7 +37,7 @@
 						"functest-f4a98",
 						"us-central1",
 						"api",
-						"gusers"
+						"cusers"
 					]
 				}
 			},
@@ -53,7 +53,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": " { \n            \"uid\": \"012345\"\n }",
+					"raw": " { \n            \"uid\": \"012345\"\n            \n }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -61,7 +61,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/gusers?id=000063bd1b7d0000000000000024",
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/cusers?id=000063bd1b7d0000000000000023",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -74,12 +74,12 @@
 						"functest-f4a98",
 						"us-central1",
 						"api",
-						"gusers"
+						"cusers"
 					],
 					"query": [
 						{
 							"key": "id",
-							"value": "000063bd1b7d0000000000000024"
+							"value": "000063bd1b7d0000000000000023"
 						}
 					]
 				}
@@ -93,7 +93,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"data_item\": {\n        \"nickname\": \"AA\",\n        \"email\": \"adam@pathschool.com\",\n        \"last_login_time\": \"2023-01-09T11:04:53.276Z\",\n        \"created_time\": \"2023-01-09T11:04:53.276Z\",\n        \"cuser\": [\n            \"000063bd1b7d0000000000000019\",\n            \"000063bd1b7d0000000000000019\"\n        ],\n        \"role\": \"teacher\",\n        \"uid\": \"012345\"\n    }\n}",
+					"raw": "{\n    \"data_item\": {\n        \"nickname\": \"Tedd  AAy\",\n        \"last_login_time\": \"2023-01-09T11:04:53.276Z\",\n        \"created_time\": \"2023-01-09T11:04:53.276Z\",\n        \"math_level\": \"2.2\",\n        \"uid\": \"012345\",\n        \"cuser\": [\"344343\",\"3424324\"]\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -101,7 +101,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/gusers",
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/cusers",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -114,7 +114,7 @@
 						"functest-f4a98",
 						"us-central1",
 						"api",
-						"gusers"
+						"cusers"
 					]
 				}
 			},
@@ -127,7 +127,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"data_item\": {\n        \"nickname\": \"AA\",\n        \"email\": \"adam@pathschool.com\",\n        \"last_login_time\": \"2023-01-09T11:04:53.276Z\",\n        \"created_time\": \"2023-01-09T11:04:53.276Z\",\n        \"cuser\": [\n            \"000063bd1b7d0000000000000019\",\n            \"000063bd1b7d0000000000000019\"\n        ],\n        \"role\": \"teacher\",\n        \"uid\": \"012345\"\n    }\n}",
+					"raw": "{\n    \"data_item\": {\n        \"nickname\": \"Tedd  AAy\",\n        \"last_login_time\": \"2023-01-09T11:04:53.276Z\",\n        \"created_time\": \"2023-01-09T11:04:53.276Z\",\n        \"math_level\": \"2.2\",\n        \"uid\": \"012345\",\n        \"cuser\": [\"344343\",\"3424324\"]\n    }\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -135,7 +135,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/gusers?id=000063bbfcd90000000000000003",
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/cusers?id=000063bd1b7d0000000000000023",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -148,12 +148,12 @@
 						"functest-f4a98",
 						"us-central1",
 						"api",
-						"gusers"
+						"cusers"
 					],
 					"query": [
 						{
 							"key": "id",
-							"value": "000063bbfcd90000000000000003"
+							"value": "000063bd1b7d0000000000000023"
 						}
 					]
 				}
@@ -167,7 +167,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": " { \n            \"uid\": \"012345\"\n }",
+					"raw": " { \n            \"uid\": \"012345\"\n }\n ",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -175,7 +175,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/gusers?id=000063bbfcd90000000000000002",
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/cusers?id=000063bd1b7d000000000000001d",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -188,12 +188,12 @@
 						"functest-f4a98",
 						"us-central1",
 						"api",
-						"gusers"
+						"cusers"
 					],
 					"query": [
 						{
 							"key": "id",
-							"value": "000063bbfcd90000000000000002"
+							"value": "000063bd1b7d000000000000001d"
 						}
 					]
 				}
@@ -215,7 +215,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://us-central1-functest-f4a98.cloudfunctions.net/api/gusers",
+					"raw": "https://us-central1-functest-f4a98.cloudfunctions.net/api/cusers",
 					"protocol": "https",
 					"host": [
 						"us-central1-functest-f4a98",
@@ -224,7 +224,7 @@
 					],
 					"path": [
 						"api",
-						"gusers"
+						"cusers"
 					]
 				}
 			},
@@ -245,7 +245,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://us-central1-functest-f4a98.cloudfunctions.net/api/gusers",
+					"raw": "https://us-central1-functest-f4a98.cloudfunctions.net/api/cusers",
 					"protocol": "https",
 					"host": [
 						"us-central1-functest-f4a98",
@@ -254,7 +254,7 @@
 					],
 					"path": [
 						"api",
-						"gusers"
+						"cusers"
 					]
 				}
 			},

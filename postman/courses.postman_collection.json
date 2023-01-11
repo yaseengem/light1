@@ -24,7 +24,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/gusers",
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -37,7 +37,7 @@
 						"functest-f4a98",
 						"us-central1",
 						"api",
-						"gusers"
+						"courses"
 					]
 				}
 			},
@@ -61,7 +61,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses?id=000063bbdd3b0000000000000001",
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses?id=000063bd1b7d0000000000000024",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -79,7 +79,7 @@
 					"query": [
 						{
 							"key": "id",
-							"value": "000063bbdd3b0000000000000001"
+							"value": "000063bd1b7d0000000000000024"
 						}
 					]
 				}
@@ -93,7 +93,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": " { \n            \"name\": \"JJJJ\",\n            \"desc\": \"maneers training\",\n            \"author\": \"jDannyfgfdf fdjkdv\",\n            \"duration\": 245,\n            \"uid\": \"012345\"\n\n\n }",
+					"raw": "\n{ \n      \"data_item\" : {\n            \"name\": \"JJJJ\",\n            \"desc\": \"maneers training\",\n            \"author\": \"jDannyfgfdf fdjkdv\",\n            \"duration\": 245,\n            \"uid\": \"012345\",\n            \"modules\": [\"23422\", \"22523434\"]\n\n      }\n }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -101,7 +101,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/gusers",
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -114,7 +114,7 @@
 						"functest-f4a98",
 						"us-central1",
 						"api",
-						"gusers"
+						"courses"
 					]
 				}
 			},
@@ -127,7 +127,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": " { \n            \"name\": \"11-2\",\n            \"desc\": \"cccdcvx training\",\n            \"author\": \"jDannyfgfdf fdjkdv\",\n            \"duration\": 3434,\n            \"uid\": \"012345\"\n\n }",
+					"raw": "\n{ \n      \"data_item\" : {\n            \"name\": \"JJJJ\",\n            \"desc\": \"maneers training\",\n            \"author\": \"jDannyfgfdf fdjkdv\",\n            \"duration\": 245,\n            \"uid\": \"012345\",\n            \"modules\": [\"23422\", \"22523434\"]\n\n      }\n }",
 					"options": {
 						"raw": {
 							"language": "json"
