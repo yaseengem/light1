@@ -86,6 +86,9 @@ exports.connectSQL = function () {
       var inst_promise = pathdb.createCollection('inst', { reuseExisting: true });
       var inst = pathdb.getCollection('inst');
 
+      var cuser_promise = pathdb.createCollection('cuser', { reuseExisting: true });
+      var cuser = pathdb.getCollection('cuser');
+
       // var myColl = pathdb.createCollection('my_collection');
     });
     // pathdb = mySession.getSchema('pathdb');

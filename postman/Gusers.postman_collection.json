@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "0b09703d-917e-4769-b22e-a20ab68cf1e1",
+		"name": "Gusers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5043632"
+	},
+	"item": [
+		{
+			"name": "GetMul",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n            \"multi\": true,\n            \"offset\": 0,\n            \"limit\": 10,\n            \"sortby\" : \"duration\",\n            \"uid\": \"012345\"\n\n }\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/gusers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"functest-f4a98",
+						"us-central1",
+						"api",
+						"gusers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n            \"uid\": \"012345\"\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/gusers?id=000063bd1b7d0000000000000018",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"functest-f4a98",
+						"us-central1",
+						"api",
+						"gusers"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "000063bd1b7d0000000000000018"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n            \"nickname\": \"AA\",\n            \"email\": \"adam@pathschool.com\",\n            \"last_login_time\": \"2023-01-09T11:04:53.276Z\",\n            \"created_time\": \"2023-01-09T11:04:53.276Z\",\n            \"cuser\" : [\"000063bd1b7d0000000000000019\",\"000063bd1b7d0000000000000019\"],\n            \"role\": \"teacher\",\n            \"uid\": \"012345\"\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/gusers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"functest-f4a98",
+						"us-central1",
+						"api",
+						"gusers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n            \"nickname\": \"AAA\",\n            \"email\": \"adam@pathschool.com\",\n            \"last_login_time\": \"2023-01-09T11:04:53.276Z\",\n            \"created_time\": \"2023-01-09T11:04:53.276Z\",\n            \"role\": \"teacher\",\n            \"uid\": \"012345\"\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/gusers?id=000063bbfcd90000000000000003",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"functest-f4a98",
+						"us-central1",
+						"api",
+						"gusers"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "000063bbfcd90000000000000003"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n            \"uid\": \"012345\"\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/gusers?id=000063bbfcd90000000000000002",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"functest-f4a98",
+						"us-central1",
+						"api",
+						"gusers"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "000063bbfcd90000000000000002"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMul CLoud",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n            \"multi\": true,\n            \"_id\": \"Ellldfsjklasgas\",\n            \"offset\": 0,\n            \"limit\": 10,\n            \"sortby\" : \"duration\"\n\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-functest-f4a98.cloudfunctions.net/api/gusers",
+					"protocol": "https",
+					"host": [
+						"us-central1-functest-f4a98",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"api",
+						"gusers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Cloud",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n            \"name\": \"Course -1\",\n            \"desc\": \"maneers training\",\n            \"author\": \"jDannyfgfdf fdjkdv\",\n            \"duration\": 245\n\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-functest-f4a98.cloudfunctions.net/api/gusers",
+					"protocol": "https",
+					"host": [
+						"us-central1-functest-f4a98",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"api",
+						"gusers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestCloud /",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-functest-f4a98.cloudfunctions.net/api",
+					"protocol": "https",
+					"host": [
+						"us-central1-functest-f4a98",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

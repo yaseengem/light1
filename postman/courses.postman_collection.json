@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "ae1b6355-491f-4fba-b78b-db72f51b3c35",
+		"name": "courses",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5043632"
+	},
+	"item": [
+		{
+			"name": "GetMul",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n            \"multi\": true,\n            \"offset\": 0,\n            \"limit\": 10,\n            \"sortby\" : \"duration\",\n            \"uid\": \"012345\"\n\n }\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/gusers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"functest-f4a98",
+						"us-central1",
+						"api",
+						"gusers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n            \"uid\": \"012345\"\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses?id=000063bbdd3b0000000000000001",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"functest-f4a98",
+						"us-central1",
+						"api",
+						"courses"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "000063bbdd3b0000000000000001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n            \"name\": \"JJJJ\",\n            \"desc\": \"maneers training\",\n            \"author\": \"jDannyfgfdf fdjkdv\",\n            \"duration\": 245,\n            \"uid\": \"012345\"\n\n\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/gusers",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"functest-f4a98",
+						"us-central1",
+						"api",
+						"gusers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n            \"name\": \"11-2\",\n            \"desc\": \"cccdcvx training\",\n            \"author\": \"jDannyfgfdf fdjkdv\",\n            \"duration\": 3434,\n            \"uid\": \"012345\"\n\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses?id=000063b96cdc0000000000000001",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"functest-f4a98",
+						"us-central1",
+						"api",
+						"courses"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "000063b96cdc0000000000000001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n            \"uid\": \"012345\"\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses?id=000063bbdd3b0000000000000001",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"functest-f4a98",
+						"us-central1",
+						"api",
+						"courses"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "000063bbdd3b0000000000000001"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMul CLoud",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n            \"multi\": true,\n            \"_id\": \"Ellldfsjklasgas\",\n            \"offset\": 0,\n            \"limit\": 10,\n            \"sortby\" : \"duration\"\n\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-functest-f4a98.cloudfunctions.net/api/courses",
+					"protocol": "https",
+					"host": [
+						"us-central1-functest-f4a98",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"api",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Cloud",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n            \"name\": \"Course -1\",\n            \"desc\": \"maneers training\",\n            \"author\": \"jDannyfgfdf fdjkdv\",\n            \"duration\": 245\n\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-functest-f4a98.cloudfunctions.net/api/courses",
+					"protocol": "https",
+					"host": [
+						"us-central1-functest-f4a98",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"api",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestCloud /",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-functest-f4a98.cloudfunctions.net/api",
+					"protocol": "https",
+					"host": [
+						"us-central1-functest-f4a98",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

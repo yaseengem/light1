@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "1998bdc0-0cd2-41f5-aa77-1a60240abaf3",
+		"name": "cuser",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5043632"
+	},
+	"item": [
+		{
+			"name": "GetMul",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n            \"multi\": true,\n            \"offset\": 0,\n            \"limit\": 10,\n            \"sortby\" : \"duration\",\n            \"uid\": \"012345\"\n }\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/cuser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"functest-f4a98",
+						"us-central1",
+						"api",
+						"cuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n            \"uid\": \"012345\"\n            \n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/cuser?id=000063bd1b7d000000000000001e",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"functest-f4a98",
+						"us-central1",
+						"api",
+						"cuser"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "000063bd1b7d000000000000001e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{ \n      \"data_item\" : {\n            \"nickname\": \"Teddy\",\n            \"last_login_time\": \"2023-01-09T11:04:53.276Z\",\n            \"created_time\": \"2023-01-09T11:04:53.276Z\",\n            \"math_level\": \"2.2\",\n            \"uid\": \"012345\"\n\n\n  }\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/cuser",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"functest-f4a98",
+						"us-central1",
+						"api",
+						"cuser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\n{ \n      \"data_item\" : {\n            \"nickname\": \"Teddy22\",\n            \"last_login_time\": \"2023-01-09T11:04:53.276Z\",\n            \"created_time\": \"2023-01-09T11:04:53.276Z\",\n            \"math_level\": \"2.2\",\n            \"uid\": \"012345\"\n\n\n  }\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/cuser?id=000063bd1b7d000000000000001e",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"functest-f4a98",
+						"us-central1",
+						"api",
+						"cuser"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "000063bd1b7d000000000000001e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n            \"uid\": \"012345\"\n }\n ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/cuser?id=000063bd1b7d000000000000001e",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5001",
+					"path": [
+						"functest-f4a98",
+						"us-central1",
+						"api",
+						"cuser"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "000063bd1b7d000000000000001e"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMul CLoud",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n            \"multi\": true,\n            \"_id\": \"Ellldfsjklasgas\",\n            \"offset\": 0,\n            \"limit\": 10,\n            \"sortby\" : \"duration\"\n\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-functest-f4a98.cloudfunctions.net/api/gusers",
+					"protocol": "https",
+					"host": [
+						"us-central1-functest-f4a98",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"api",
+						"gusers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Put Cloud",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " { \n            \"name\": \"Course -1\",\n            \"desc\": \"maneers training\",\n            \"author\": \"jDannyfgfdf fdjkdv\",\n            \"duration\": 245\n\n }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-functest-f4a98.cloudfunctions.net/api/gusers",
+					"protocol": "https",
+					"host": [
+						"us-central1-functest-f4a98",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"api",
+						"gusers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TestCloud /",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://us-central1-functest-f4a98.cloudfunctions.net/api",
+					"protocol": "https",
+					"host": [
+						"us-central1-functest-f4a98",
+						"cloudfunctions",
+						"net"
+					],
+					"path": [
+						"api"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,7 +1,7 @@
 {
 	"info": {
-		"_postman_id": "ae1b6355-491f-4fba-b78b-db72f51b3c35",
-		"name": "light1",
+		"_postman_id": "4694823f-49ab-414d-b5fc-b6a6b482d7e8",
+		"name": "inst",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "5043632"
 	},
@@ -16,7 +16,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": " { \n            \"multi\": true,\n            \"offset\": 0,\n            \"limit\": 10,\n            \"sortby\" : \"duration\",\n            \"uid\": \"012345\"\n\n }\n",
+					"raw": " { \n            \"multi\": true,\n            \"offset\": 0,\n            \"limit\": 10,\n            \"sortby\" : \"duration\",\n            \"uid\": \"012345\"\n }\n",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -24,7 +24,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses",
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/inst",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -37,7 +37,7 @@
 						"functest-f4a98",
 						"us-central1",
 						"api",
-						"courses"
+						"inst"
 					]
 				}
 			},
@@ -53,7 +53,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": " { \n            \"uid\": \"012345\"\n }",
+					"raw": " { \n            \"uid\": \"012345\"\n            \n }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -61,7 +61,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses?id=000063bbdd3b0000000000000001",
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/inst?id=000063bd1b7d0000000000000014",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -74,12 +74,12 @@
 						"functest-f4a98",
 						"us-central1",
 						"api",
-						"courses"
+						"inst"
 					],
 					"query": [
 						{
 							"key": "id",
-							"value": "000063bbdd3b0000000000000001"
+							"value": "000063bd1b7d0000000000000014"
 						}
 					]
 				}
@@ -93,7 +93,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": " { \n            \"name\": \"JJJJ\",\n            \"desc\": \"maneers training\",\n            \"author\": \"jDannyfgfdf fdjkdv\",\n            \"duration\": 245,\n            \"uid\": \"012345\"\n\n\n }",
+					"raw": " { \n            \"name\": \"insttt1\",\n            \"admin_user_id\": \"00003300202020303\",\n            \"address\": \"sdfgsgd\",\n            \"created_time\": \"2023-01-09T11:04:53.276Z\"\n            \n }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -101,7 +101,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses",
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/inst",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -114,7 +114,7 @@
 						"functest-f4a98",
 						"us-central1",
 						"api",
-						"courses"
+						"inst"
 					]
 				}
 			},
@@ -127,7 +127,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": " { \n            \"name\": \"11-2\",\n            \"desc\": \"cccdcvx training\",\n            \"author\": \"jDannyfgfdf fdjkdv\",\n            \"duration\": 3434,\n            \"uid\": \"012345\"\n\n }",
+					"raw": " { \n            \"name\": \"fgsgsd\",\n            \"admin_user_id\": \"00003300202020303\",\n            \"address\": \"6/bffdfd, India\",\n            \"created_time\": \"2023-01-09T11:04:53.276Z\",\n            \"org\" : \"000063bd1b7d0000000000000007\"\n            \n }",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -135,7 +135,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses?id=000063b96cdc0000000000000001",
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/inst?id=000063bd1b7d000000000000000a",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -148,12 +148,12 @@
 						"functest-f4a98",
 						"us-central1",
 						"api",
-						"courses"
+						"inst"
 					],
 					"query": [
 						{
 							"key": "id",
-							"value": "000063b96cdc0000000000000001"
+							"value": "000063bd1b7d000000000000000a"
 						}
 					]
 				}
@@ -175,7 +175,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/courses?id=000063bbdd3b0000000000000001",
+					"raw": "http://127.0.0.1:5001/functest-f4a98/us-central1/api/inst?id=000063bd1b7d0000000000000007",
 					"protocol": "http",
 					"host": [
 						"127",
@@ -188,12 +188,12 @@
 						"functest-f4a98",
 						"us-central1",
 						"api",
-						"courses"
+						"inst"
 					],
 					"query": [
 						{
 							"key": "id",
-							"value": "000063bbdd3b0000000000000001"
+							"value": "000063bd1b7d0000000000000007"
 						}
 					]
 				}
@@ -215,7 +215,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://us-central1-functest-f4a98.cloudfunctions.net/api/courses",
+					"raw": "https://us-central1-functest-f4a98.cloudfunctions.net/api/gusers",
 					"protocol": "https",
 					"host": [
 						"us-central1-functest-f4a98",
@@ -224,7 +224,7 @@
 					],
 					"path": [
 						"api",
-						"courses"
+						"gusers"
 					]
 				}
 			},
@@ -245,7 +245,7 @@
 					}
 				},
 				"url": {
-					"raw": "https://us-central1-functest-f4a98.cloudfunctions.net/api/courses",
+					"raw": "https://us-central1-functest-f4a98.cloudfunctions.net/api/gusers",
 					"protocol": "https",
 					"host": [
 						"us-central1-functest-f4a98",
@@ -254,7 +254,7 @@
 					],
 					"path": [
 						"api",
-						"courses"
+						"gusers"
 					]
 				}
 			},
