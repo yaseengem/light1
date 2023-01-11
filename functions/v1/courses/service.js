@@ -1,28 +1,28 @@
 const db = require('../../common/db.service');
 const helper = require(process.cwd() + '/utils/helper.util.js');
 const config = require(process.cwd() + '/configs/general.config');
-
+const c_name = 'courses';
 async function get(req) {
     if (req.body.multi) {
         const rows = await db.getMulti(
-            'courses', req.body.searchstring, req.body.offset, req.body.limit, req.body.sortby
+            c_name, req.body.searchstring, req.body.offset, req.body.limit, req.body.sortby
         );
         const data = helper.emptyOrRows(rows);
         const meta = { offset: req.body.offset };
-        console.log("Completed exeuting the get multi function in courses");
+        console.log("Completed exeuting the get multi function in " + c_name);
         return {
             data,
             meta
         }
     }
     else {
-        console.log("Courses service. Param id is " + req.query.id);
+        console.log(c_name + " service. Param id is " + req.query.id);
         const rows = await db.get(
-            'courses', req.query.id
+            c_name, req.query.id
         );
         const data = helper.emptyOrRows(rows);
         const meta = {};
-        console.log("Completed exeuting the get one function in courses");
+        console.log("Completed exeuting the get one function in in " + c_name);
         return {
             data,
             meta
@@ -31,45 +31,44 @@ async function get(req) {
 }
 
 async function create(req) {
-    var new_course = { name: req.body.name, desc: req.body.desc, authors: req.body.authors, duration: req.body.duration, rating: req.body.rating };
-    console.log("New Course name is : " + JSON.stringify(new_course));
+    var new_item = req.body.data_item;
+    console.log("New Course name is : " + JSON.stringify(new_item));
     const createdId = await db.create(
-        'courses', JSON.stringify(new_course)
+        c_name, JSON.stringify(new_item)
     );
-    console.log("Completed cerating course. Id :" + createdId);
-    let message = 'Error in creating course';
+    console.log("Completed cerating " + c_name + ". Id :" + createdId);
+    let message = "Error in creating in " + c_name;
     if (createdId != '0') {
 
-        console.log("Send back the created id :" + createdId);
-        message = 'Course created successfully';
+        console.log("Send back the created " + c_name + " id :" + createdId);
+        message = c_name + ' created successfully';
         return { message, createdId };
     } else {
-
         return { message };
     }
 }
 
 async function update(id, req) {
-    var update_course = { name: req.body.name, desc: req.body.desc, authors: req.body.authors, duration: req.body.duration, rating: req.body.rating };
+    var update_course =  req.body.data_item;
     console.log("Updated Course is : " + JSON.stringify(update_course));
     const result = await db.update(
-        'courses', id, JSON.stringify(update_course)
+        c_name, id, JSON.stringify(update_course)
     );
-    let message = 'Error in updating course';
+    let message = 'Error in updating ' + c_name;
     if (result) {
-        message = 'Course updated successfully';
+        message = c_name + ' updated successfully';
     }
-    console.log("Completed exeuting the update function in courses");
+    console.log("Completed exeuting the update function in  " + c_name);
     return { message };
 }
 
 async function remove(id) {
-    const result = await db.remove("courses", id);
-    let message = 'Error in deleting Course';
+    const result = await db.remove(c_name, id);
+    let message = 'Error in deleting ' + c_name;
     if (result) {
-        message = 'Course deleted successfully';
+        message = c_name + ' deleted successfully';
     }
-    console.log("Completed exeuting the remove function in courses");
+    console.log("Completed exeuting the remove function in " + c_name);
     return { message };
 }
 

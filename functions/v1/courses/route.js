@@ -1,19 +1,19 @@
 const express = require('express');
 const router = express.Router();
-const coursesController = require('./controller');
+const aController = require('./controller');
 
 /* GET programming languages. */
-router.get('/', coursesController.get);
+router.get('/', aController.get);
   
 /* POST programming language */
-router.put('/', coursesController.create);
+router.put('/', aController.create);
 
 /* PUT programming language */
-router.post('/', coursesController.update);
+router.post('/', aController.update);
 
 
 /* DELETE programming language */
-router.delete('/', coursesController.remove);
+router.delete('/', aController.remove);
 
 
 module.exports = router;
