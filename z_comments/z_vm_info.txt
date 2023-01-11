@@ -16,11 +16,10 @@ Perfectly working and strated the coding with this vm now. No more backup from h
 
 v0.x  - Using this VM now for dvelopment.
 
-
-
-vk0.x - Taken from v0.5. For experimenting on Kubernetes.
+vk0.6 - Taken from v0.5. For experimenting on Kubernetes.
 THis will be experimental VM Only. Can be deleted as well.
 
+vp0.6 - Taken from v0.6. It has overload like mysql. But the best VM.
 
 Ubuntu L - Light related work
 Ubuntu K - Kubernetes work. vk0.x
