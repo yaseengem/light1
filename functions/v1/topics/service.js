@@ -1,7 +1,7 @@
 const db = require('../../common/db.service');
 const helper = require(process.cwd() + '/utils/helper.util.js');
 const config = require(process.cwd() + '/configs/general.config');
-const c_name = 'cuser';
+const c_name = 'topics';
 async function get(req) {
     if (req.body.multi) {
         const rows = await db.getMulti(

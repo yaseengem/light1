@@ -1,7 +1,7 @@
 const db = require('../../common/db.service');
 const helper = require(process.cwd() + '/utils/helper.util.js');
 const config = require(process.cwd() + '/configs/general.config');
-const c_name = 'inst';
+const c_name = 'cusers';
 async function get(req) {
     if (req.body.multi) {
         const rows = await db.getMulti(
@@ -31,7 +31,7 @@ async function get(req) {
 }
 
 async function create(req) {
-    var new_item = { name: req.body.name, admin_user_id: req.body.admin_user_id, address: req.body.address, created_time: req.body.created_time, org: req.body.org };
+    var new_item = req.body.data_item;
     console.log("New Course name is : " + JSON.stringify(new_item));
     const createdId = await db.create(
         c_name, JSON.stringify(new_item)
@@ -49,7 +49,7 @@ async function create(req) {
 }
 
 async function update(id, req) {
-    var update_course = { name: req.body.name, admin_user_id: req.body.admin_user_id, address: req.body.address, created_time: req.body.created_time };
+    var update_course =  req.body.data_item;
     console.log("Updated Course is : " + JSON.stringify(update_course));
     const result = await db.update(
         c_name, id, JSON.stringify(update_course)

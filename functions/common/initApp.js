@@ -80,14 +80,23 @@ exports.connectSQL = function () {
       var gusers_promise = pathdb.createCollection('gusers', { reuseExisting: true });
       var gusers = pathdb.getCollection('gusers');
 
-      var org_promise = pathdb.createCollection('org', { reuseExisting: true });
+      var org_promise = pathdb.createCollection('orgs', { reuseExisting: true });
       var org = pathdb.getCollection('org');
 
-      var inst_promise = pathdb.createCollection('inst', { reuseExisting: true });
+      var inst_promise = pathdb.createCollection('insts', { reuseExisting: true });
       var inst = pathdb.getCollection('inst');
 
-      var cuser_promise = pathdb.createCollection('cuser', { reuseExisting: true });
+      var cuser_promise = pathdb.createCollection('cusers', { reuseExisting: true });
       var cuser = pathdb.getCollection('cuser');
+
+      var modules_promise = pathdb.createCollection('modules', { reuseExisting: true });
+      var modules = pathdb.getCollection('modules');
+
+      var topics_promise = pathdb.createCollection('topics', { reuseExisting: true });
+      var topics = pathdb.getCollection('topics');
+
+      var questions_promise = pathdb.createCollection('questions', { reuseExisting: true });
+      var questions = pathdb.getCollection('questions');
 
       // var myColl = pathdb.createCollection('my_collection');
     });

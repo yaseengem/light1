@@ -52,25 +52,34 @@ app.use(express.json());
 app.get('/', (req, res) => {
     res.json({ 'message': 'ok' });
 })
-const coursesRouter = require('./v1/courses/route.js');
-app.use('/courses', coursesRouter);
 
 const gusersRouter = require('./v1/gusers/route.js');
 app.use('/gusers', gusersRouter);
 
+const cusersRouter = require('./v1/cusers/route.js');
+app.use('/cusers', cusersRouter);
 
-const orgRouter = require('./v1/org/route.js');
-app.use('/org', orgRouter);
+const orgsRouter = require('./v1/orgs/route.js');
+app.use('/orgs', orgsRouter);
 
-const instRouter = require('./v1/inst/route.js');
-app.use('/inst', instRouter);
+const instsRouter = require('./v1/insts/route.js');
+app.use('/insts', instsRouter);
 
-const cuserRouter = require('./v1/cuser/route.js');
-app.use('/cuser', cuserRouter);
+const coursesRouter = require('./v1/courses/route.js');
+app.use('/courses', coursesRouter);
+
+const modulesRouter = require('./v1/modules/route.js');
+app.use('/modules', modulesRouter);
+
+const topicsRouter = require('./v1/topics/route.js');
+app.use('/topics', topicsRouter);
+
+const questionsRouter = require('./v1/questions/route.js');
+app.use('/questions', questionsRouter);
 
 
 date_test = new Date();
-console.log ("Date is : ", date_test);
+console.log("Date is : ", date_test);
 
 /* Error handler middleware */
 app.use((err, req, res, next) => {
