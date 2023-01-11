@@ -38,6 +38,7 @@ Working query json format. Put this in body, json format.
 
             "searchstring" : "_id like '%00063b96cdc00000000000000%' && name like 'Cou%'" - Working perfectly fine.
 
+            "searchstring" : "main_office.address like '%In%'",    - Also works to search a sub object in json
 
  }
 
