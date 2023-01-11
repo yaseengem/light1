@@ -1,4 +1,11 @@
 Daily notes:
+
+
+11 Dec 2023:
+Finally completed all the APIs.. I will stop this here now.. Move to front end. 
+There are some gaps.. link link between the quetsions and the topics, etc.. May be after the front end it will be more clear.
+
+
 10 Dec 2023:
 Just added the apis for org, inst.. BIt of finetuning.. 
 Just realised that I can use the object as itis from the req.body.item.xxx. This will simplify the API ceration. I will do that for the next APIs.
