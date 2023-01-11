@@ -1,19 +1,19 @@
 const express = require('express');
 const router = express.Router();
-const gusersController = require('./controller');
+const aController = require('./controller');
 
 /* GET programming languages. */
-router.get('/', gusersController.get);
+router.get('/', aController.get);
   
 /* POST programming language */
-router.put('/', gusersController.create);
+router.put('/', aController.create);
 
 /* PUT programming language */
-router.post('/', gusersController.update);
+router.post('/', aController.update);
 
 
 /* DELETE programming language */
-router.delete('/', gusersController.remove);
+router.delete('/', aController.remove);
 
 
 module.exports = router;
