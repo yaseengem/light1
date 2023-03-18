@@ -18,7 +18,7 @@
     "@mysql/xdevapi": "^8.0.31",
     "dotenv": "^16.0.3",
     "firebase-admin": "^10.0.2",
-    "firebase-functions": "^4.1.1",
+    "firebase-functions": "^4.2.1",
     "mysql": "^2.18.1"
   },
   "devDependencies": {
